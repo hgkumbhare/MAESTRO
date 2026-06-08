@@ -55,6 +55,8 @@ from src.tools_improved_smolagents.toolkits import (
     reset_all as reset_all_improved_smol
 )
 
+from src.evals.unit_test_doc_utils import apply_unit_test_documentation
+
 from tqdm.auto import tqdm
 
 smolagents = None
@@ -679,7 +681,7 @@ def get_latest_results_from_dir(results_root_dir, model, tool, print_errors=Fals
         )
 
 
-def get_toolkits(toolkits, tool_set='original'):
+def get_toolkits(toolkits, tool_set='original', include_unit_tests=False):
     """Get the toolkits to be used for the agent."""
     tools = []
     
@@ -711,10 +713,18 @@ def get_toolkits(toolkits, tool_set='original'):
         tools += customer_relationship_manager_tk
     # The company directory toolkit is always included in order to find email addresses by name
     tools += company_directory_tk
-    return tools
+    return apply_unit_test_documentation(tools, include_unit_tests=include_unit_tests)
 
 
-def generate_results(queries_path, model_name, tool_selection="all", num_retrys=0, agent_engine="langchain", tool_set='original'):
+def generate_results(
+    queries_path,
+    model_name,
+    tool_selection="all",
+    num_retrys=0,
+    agent_engine="langchain",
+    tool_set='original',
+    include_unit_tests=False,
+):
     """Generates results for a given model and set of queries. Saves the results to a csv file."""
     toolkits = ["email", "calendar", "analytics", "project_management", "customer_relationship_manager"]
     queries_df = pd.read_csv(queries_path)
@@ -781,14 +791,14 @@ def generate_results(queries_path, model_name, tool_selection="all", num_retrys=
         elif tool_set == 'improved':
             actual_tool_set = 'smolagents_improved'
     
-    tools = get_toolkits(toolkits, tool_set=actual_tool_set)
+    tools = get_toolkits(toolkits, tool_set=actual_tool_set, include_unit_tests=include_unit_tests)
 
     for i, query in tqdm(list(enumerate(queries))):
         reset_all()
 
         if tool_selection == "domains":
             toolkits = queries_df["domains"].iloc[i].strip("][").replace("'", "").split(", ")
-            tools = get_toolkits(toolkits, tool_set=actual_tool_set)
+            tools = get_toolkits(toolkits, tool_set=actual_tool_set, include_unit_tests=include_unit_tests)
 
         if agent_engine == "smolagents":
             # Initialize the appropriate model based on model_name
