@@ -1,7 +1,7 @@
 import ast
 from pathlib import Path
 
-from src.tools_improved_smolagents import test_calendar as test_smol_calendar_toolkit_improved
+from tests.src.tools_improved_smolagents import test_calendar as test_smol_calendar_toolkit_improved
 
 
 UNIT_TESTS_BY_TOOL = {
