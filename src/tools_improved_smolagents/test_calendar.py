@@ -3,18 +3,20 @@ import sys
 import types
 from pathlib import Path
 
-import pandas as pd
-import pytest
-
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
+CURRENT_DIR = Path(__file__).resolve().parent
+while str(CURRENT_DIR) in sys.path:
+    sys.path.remove(str(CURRENT_DIR))
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-if "smolagents" not in sys.modules:
-    smolagents_stub = types.ModuleType("smolagents")
-    smolagents_stub.tool = lambda func: func
-    sys.modules["smolagents"] = smolagents_stub
+smolagents_stub = types.ModuleType("smolagents")
+smolagents_stub.tool = lambda func: func
+sys.modules["smolagents"] = smolagents_stub
+
+import pandas as pd
+import pytest
 
 calendar = importlib.import_module("src.tools_improved_smolagents.calendar")
 
