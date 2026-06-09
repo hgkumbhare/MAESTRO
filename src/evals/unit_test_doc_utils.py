@@ -88,7 +88,9 @@ def apply_unit_test_documentation(tools, include_unit_tests=False):
 
         description = _ORIGINAL_TOOL_DESCRIPTIONS[tool_key]
         if include_unit_tests:
+            print('Previous description: ', description)
             description += _build_unit_test_documentation(tool_name, test_smol_calendar_toolkit_improved)
+            print('Updated description: ', description)
         _set_tool_description(tool, description)
 
     return tools

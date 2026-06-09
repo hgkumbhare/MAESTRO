@@ -54,10 +54,23 @@ parser.add_argument(
     help="Use improved tools instead of base tools"
 )
 
+parser.add_argument(
+    "--include_unit_tests",
+    action="store_true",
+    help="Use improved tools instead of base tools"
+)
+
 args = parser.parse_args()
 
 if __name__ == "__main__":
     ground_truth = pd.read_csv(args.queries_path)
     ground_truth["answer"] = ground_truth["answer"].apply(ast.literal_eval)
-    results = generate_results(args.queries_path, args.model_name, args.tool_selection, agent_engine=args.agent_engine, tool_set="improved" if args.use_improved_tools else "original")
+    results = generate_results(
+        args.queries_path,
+        args.model_name,
+        args.tool_selection,
+        agent_engine=args.agent_engine,
+        tool_set="improved" if args.use_improved_tools else "original",
+        include_unit_tests=args.include_unit_tests,
+    )
     calculate_metrics(ground_truth, results)
