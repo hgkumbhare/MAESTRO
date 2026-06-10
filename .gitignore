@@ -10,3 +10,4 @@ downloads
 .ipynb_checkpoints/
 */.ipynb_checkpoints/
 data/results/
+.claude/settings.local.json

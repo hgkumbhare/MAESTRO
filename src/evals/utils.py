@@ -59,12 +59,8 @@ from src.evals.unit_test_doc_utils import apply_unit_test_documentation
 
 from tqdm.auto import tqdm
 
-smolagents = None
-try:
-    from smolagents import CodeAgent
-    from smolagents.models import LiteLLMModel
-except ImportError:
-    pass
+from smolagents import CodeAgent
+from smolagents.models import LiteLLMModel
 
 
 DOMAINS = [calendar, email, analytics, project_management, customer_relationship_manager]

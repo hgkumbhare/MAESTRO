@@ -1,7 +1,18 @@
 import ast
 from pathlib import Path
 
-from tests.src.tools_improved_smolagents import test_calendar as test_smol_calendar_toolkit_improved
+# Reference the unit-test source by path rather than importing it. The test
+# module installs a stub into ``sys.modules["smolagents"]`` at import time for
+# its own isolation; importing it here would poison the real ``smolagents``
+# package for the whole process (breaking ``CodeAgent``). We only need the
+# source text to extract test bodies, so read the file directly.
+_TEST_CALENDAR_PATH = (
+    Path(__file__).resolve().parents[2]
+    / "tests"
+    / "src"
+    / "tools_improved_smolagents"
+    / "test_calendar.py"
+)
 
 
 UNIT_TESTS_BY_TOOL = {
@@ -48,8 +59,8 @@ def _set_tool_description(tool, description):
         pass
 
 
-def _get_test_source_by_name(test_module):
-    test_file = Path(test_module.__file__)
+def _get_test_source_by_name(test_file_path):
+    test_file = Path(test_file_path)
     source = test_file.read_text()
     tree = ast.parse(source)
     tests = {}
@@ -61,8 +72,8 @@ def _get_test_source_by_name(test_module):
     return tests
 
 
-def _build_unit_test_documentation(tool_name, test_module):
-    tests_by_name = _get_test_source_by_name(test_module)
+def _build_unit_test_documentation(tool_name, test_file_path):
+    tests_by_name = _get_test_source_by_name(test_file_path)
     test_sources = [
         tests_by_name[test_name]
         for test_name in UNIT_TESTS_BY_TOOL.get(tool_name, [])
@@ -89,7 +100,7 @@ def apply_unit_test_documentation(tools, include_unit_tests=False):
         description = _ORIGINAL_TOOL_DESCRIPTIONS[tool_key]
         if include_unit_tests:
             print('Previous description: ', description)
-            description += _build_unit_test_documentation(tool_name, test_smol_calendar_toolkit_improved)
+            description += _build_unit_test_documentation(tool_name, _TEST_CALENDAR_PATH)
             print('Updated description: ', description)
         _set_tool_description(tool, description)
 
