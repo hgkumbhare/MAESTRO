@@ -426,6 +426,7 @@ def calculate_metrics(ground_truth_df, predictions_df, print_errors=True):
     df["unwanted_side_effects"] = [has_side_effects(pred, gt) for pred, gt in zip(df["prediction"], df["ground_truth"])]
     df["no_actions"] = [not len(pred) for pred in df["prediction"]]
     # wrong email if @example is in the prediction and @atlas is not in the prediction. Prediction is a list so needs to be converted to a string
+    # TODO(fix_eval): Update to OR condition because it doesn't cover the case when email is just name without @.
     df["wrong_email"] = [("@example" in str(pred)) and ("@atlas" not in str(pred)) for pred in df["prediction"]]
     df["wrong_email"] = df["wrong_email"] & ~df["correct"]
     # Puts in end of November to plot instead of 29th november, but everything else matches

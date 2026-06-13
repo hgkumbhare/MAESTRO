@@ -1,18 +1,19 @@
 import ast
 from pathlib import Path
 
-# Reference the unit-test source by path rather than importing it. The test
-# module installs a stub into ``sys.modules["smolagents"]`` at import time for
-# its own isolation; importing it here would poison the real ``smolagents``
+# Reference the unit-test sources by path rather than importing them. The test
+# modules install a stub into ``sys.modules["smolagents"]`` at import time for
+# their own isolation; importing them here would poison the real ``smolagents``
 # package for the whole process (breaking ``CodeAgent``). We only need the
-# source text to extract test bodies, so read the file directly.
-_TEST_CALENDAR_PATH = (
+# source text to extract test bodies, so read the files directly.
+_TESTS_DIR = (
     Path(__file__).resolve().parents[2]
     / "tests"
     / "src"
     / "tools_improved_smolagents"
-    / "test_calendar.py"
 )
+_TEST_CALENDAR_PATH = _TESTS_DIR / "test_calendar.py"
+_TEST_PROJECT_MANAGEMENT_PATH = _TESTS_DIR / "test_project_management.py"
 
 
 UNIT_TESTS_BY_TOOL = {
@@ -38,6 +39,56 @@ UNIT_TESTS_BY_TOOL = {
         "test_update_event_changes_field_and_normalizes_email",
         "test_update_event_handles_missing_or_unknown_id",
     ],
+    "get_task_information_by_id": [
+        "test_get_task_information_by_id_returns_requested_field",
+        "test_get_task_information_by_id_missing_task_id",
+        "test_get_task_information_by_id_missing_field",
+        "test_get_task_information_by_id_unknown_field",
+        "test_get_task_information_by_id_unknown_task",
+    ],
+    "search_tasks": [
+        "test_search_tasks_no_parameters",
+        "test_search_tasks_partial_case_insensitive_name",
+        "test_search_tasks_multiple_fields_are_anded",
+        "test_search_tasks_returns_full_records",
+        "test_search_tasks_no_matches_returns_empty_list",
+    ],
+    "create_task": [
+        "test_create_task_appends_and_returns_new_id_and_lowercases_email",
+        "test_create_task_missing_details",
+        "test_create_task_invalid_assignee",
+        "test_create_task_invalid_list_name",
+        "test_create_task_invalid_board",
+    ],
+    "delete_task": [
+        "test_delete_task_removes_existing_task",
+        "test_delete_task_missing_id",
+        "test_delete_task_unknown_id",
+    ],
+    "update_task": [
+        "test_update_task_changes_field",
+        "test_update_task_normalizes_email",
+        "test_update_task_missing_parameters",
+        "test_update_task_invalid_board",
+        "test_update_task_invalid_list_name",
+        "test_update_task_invalid_assignee",
+        "test_update_task_unknown_field",
+        "test_update_task_unknown_task",
+    ],
+}
+
+# Maps each tool to the test file whose source defines its unit tests.
+_TEST_FILE_BY_TOOL = {
+    "get_event_information_by_id": _TEST_CALENDAR_PATH,
+    "search_events": _TEST_CALENDAR_PATH,
+    "create_event": _TEST_CALENDAR_PATH,
+    "delete_event": _TEST_CALENDAR_PATH,
+    "update_event": _TEST_CALENDAR_PATH,
+    "get_task_information_by_id": _TEST_PROJECT_MANAGEMENT_PATH,
+    "search_tasks": _TEST_PROJECT_MANAGEMENT_PATH,
+    "create_task": _TEST_PROJECT_MANAGEMENT_PATH,
+    "delete_task": _TEST_PROJECT_MANAGEMENT_PATH,
+    "update_task": _TEST_PROJECT_MANAGEMENT_PATH,
 }
 
 _ORIGINAL_TOOL_DESCRIPTIONS = {}
@@ -50,8 +101,10 @@ def _get_tool_description(tool):
 def _set_tool_description(tool, description):
     if hasattr(tool, "description"):
         try:
+            print("congrats added unit tests to tool description.")
             tool.description = description
         except AttributeError:
+            print("Ohh no failed to add unit tests to tool description.")
             pass
     try:
         tool.__doc__ = description
@@ -100,7 +153,8 @@ def apply_unit_test_documentation(tools, include_unit_tests=False):
         description = _ORIGINAL_TOOL_DESCRIPTIONS[tool_key]
         if include_unit_tests:
             print('Previous description: ', description)
-            description += _build_unit_test_documentation(tool_name, _TEST_CALENDAR_PATH)
+            test_file_path = _TEST_FILE_BY_TOOL.get(tool_name, _TEST_CALENDAR_PATH)
+            description += _build_unit_test_documentation(tool_name, test_file_path)
             print('Updated description: ', description)
         _set_tool_description(tool, description)
 
