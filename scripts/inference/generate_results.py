@@ -60,6 +60,12 @@ parser.add_argument(
     help="Use improved tools instead of base tools"
 )
 
+parser.add_argument(
+    "--include_integration_tests",
+    action="store_true",
+    help="Use integration tests in tools doc instead of base tools"
+)
+
 args = parser.parse_args()
 
 if __name__ == "__main__":
@@ -72,5 +78,6 @@ if __name__ == "__main__":
         agent_engine=args.agent_engine,
         tool_set="improved" if args.use_improved_tools else "original",
         include_unit_tests=args.include_unit_tests,
+        include_integration_tests=args.include_integration_tests
     )
     calculate_metrics(ground_truth, results)

@@ -56,6 +56,7 @@ from src.tools_improved_smolagents.toolkits import (
 )
 
 from src.evals.unit_test_doc_utils import apply_unit_test_documentation
+from src.evals.integration_test_doc_utils import apply_integration_test_documentation
 
 from tqdm.auto import tqdm
 
@@ -678,7 +679,7 @@ def get_latest_results_from_dir(results_root_dir, model, tool, print_errors=Fals
         )
 
 
-def get_toolkits(toolkits, tool_set='original', include_unit_tests=False):
+def get_toolkits(toolkits, tool_set='original', include_unit_tests=False, include_integration_tests=False):
     """Get the toolkits to be used for the agent."""
     tools = []
     
@@ -710,7 +711,11 @@ def get_toolkits(toolkits, tool_set='original', include_unit_tests=False):
         tools += customer_relationship_manager_tk
     # The company directory toolkit is always included in order to find email addresses by name
     tools += company_directory_tk
-    return apply_unit_test_documentation(tools, include_unit_tests=include_unit_tests)
+    if include_unit_tests:
+        return apply_unit_test_documentation(tools, include_unit_tests=include_unit_tests)
+    elif include_integration_tests:
+        return apply_integration_test_documentation(tools)
+    return tools
 
 
 def generate_results(
@@ -721,6 +726,7 @@ def generate_results(
     agent_engine="langchain",
     tool_set='original',
     include_unit_tests=False,
+    include_integration_tests=False,
 ):
     """Generates results for a given model and set of queries. Saves the results to a csv file."""
     toolkits = ["email", "calendar", "analytics", "project_management", "customer_relationship_manager"]
@@ -788,7 +794,7 @@ def generate_results(
         elif tool_set == 'improved':
             actual_tool_set = 'smolagents_improved'
     
-    tools = get_toolkits(toolkits, tool_set=actual_tool_set, include_unit_tests=include_unit_tests)
+    tools = get_toolkits(toolkits, tool_set=actual_tool_set, include_unit_tests=include_unit_tests, include_integration_tests=include_integration_tests)
 
     for i, query in tqdm(list(enumerate(queries))):
         reset_all()
