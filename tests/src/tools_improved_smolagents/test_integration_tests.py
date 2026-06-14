@@ -58,28 +58,32 @@ def test_move_in_progress_tasks_to_in_review():
         ]
     )
 
+    # Inputs: Move all of Aisha's tasks that are in progress to in review
     name = 'Aisha'
+    current_list_name = "In Progress"
+    updated_list_name = "In Review"
+
+    # tool calling
     emails = call_tool(company_directory.find_email_address, name)
     assert len(emails) == 1
     assert "aisha.chen@atlas.com" in emails
     assert "aisha.chen@example.com" not in emails
 
     email_id = str(emails[0])
-    results = call_tool(project_management.search_tasks, assigned_to_email=email_id, list_name="In Progress" )
+    results = call_tool(project_management.search_tasks, assigned_to_email=email_id, list_name=current_list_name )
     assert len(results) == 1
     assert results[0]["task_id"] == "00000042"
     assert results[0]["assigned_to_email"] == "aisha.chen@atlas.com"
 
-    update_message = call_tool(project_management.update_task, "00000042", "list_name", "In Review")
+    update_message = call_tool(project_management.update_task, "00000042", "list_name", updated_list_name)
     assert update_message == "Task updated successfully."
 
     updated_task = project_management.PROJECT_TASKS.loc[
         project_management.PROJECT_TASKS["task_id"] == "00000042"
     ].iloc[0]
-    assert updated_task["list_name"] == "In Review"
+    assert updated_task["list_name"] == updated_list_name
 
 
-# Template: "Move all of {name}'s overdue tasks in the backlog to in progress"
 def test_integration_move_all_overdue_backlog_tasks_to_in_progress():
     set_tasks(
         [
@@ -88,7 +92,7 @@ def test_integration_move_all_overdue_backlog_tasks_to_in_progress():
                 "task_name": "Prepare Q3 product launch plan",
                 "assigned_to_email": "aisha.chen@atlas.com",
                 "list_name": "Backlog",
-                "due_date": "2023-01-01",
+                "due_date": "2023-10-01",
                 "board": "Design",
             },
             {
@@ -96,7 +100,7 @@ def test_integration_move_all_overdue_backlog_tasks_to_in_progress():
                 "task_name": "Update onboarding flow",
                 "assigned_to_email": "aisha.chen@atlas.com",
                 "list_name": "Backlog",
-                "due_date": "2023-01-10",
+                "due_date": "2023-11-30",
                 "board": "Front end",
             },
             {
@@ -110,7 +114,13 @@ def test_integration_move_all_overdue_backlog_tasks_to_in_progress():
         ]
     )
 
-    name = "Aisha"
+    # Inputs: "Move all of Aisha's overdue tasks in the backlog to in progress and today's date is 2023-11-30"
+    name = 'Aisha'
+    current_list_name = "Backlog"
+    updated_list_name = "In Progress"
+    today_date = "2023-11-30"
+
+    # Tool calling
     emails = call_tool(company_directory.find_email_address, name)
     assert len(emails) == 1
     returned_email = str(emails[0])
@@ -118,22 +128,22 @@ def test_integration_move_all_overdue_backlog_tasks_to_in_progress():
     results = call_tool(
         project_management.search_tasks,
         assigned_to_email=returned_email,
-        list_name="Backlog",
-        due_date="2023-01",
+        list_name=current_list_name
     )
     assert {task["task_id"] for task in results} == {"00000042", "00000043"}
 
+    # Important: Get all tasks and update only if due date is older than today_date.
     for task in results:
-        update_message = call_tool(project_management.update_task, task["task_id"], "list_name", "In Progress")
-        assert update_message == "Task updated successfully."
+        if task["due_date"] < today_date:
+            update_message = call_tool(project_management.update_task, task["task_id"], "list_name", updated_list_name)
+            assert update_message == "Task updated successfully."
 
     updated_lists = project_management.PROJECT_TASKS.set_index("task_id")["list_name"].to_dict()
-    assert updated_lists["00000042"] == "In Progress"
-    assert updated_lists["00000043"] == "In Progress"
+    assert updated_lists["00000042"] == updated_list_name
+    assert updated_lists["00000043"] == "Backlog"
     assert updated_lists["00000044"] == "Backlog"
 
 
-# Template: Move any of {name}'s tasks that are in review to completed"
 def test_integration_move_any_review_tasks_to_completed():
     set_tasks(
         [
@@ -164,7 +174,12 @@ def test_integration_move_any_review_tasks_to_completed():
         ]
     )
 
-    name = "Aisha"
+    # Inputs: Move any of Aisha's tasks that are in review to completed"
+    name = 'Aisha'
+    current_list_name = "In Review"
+    updated_list_name = "Completed"
+
+    # Tool calling
     emails = call_tool(company_directory.find_email_address, name)
     assert len(emails) == 1
     returned_email = str(emails[0])
@@ -172,59 +187,16 @@ def test_integration_move_any_review_tasks_to_completed():
     review_tasks = call_tool(
         project_management.search_tasks,
         assigned_to_email=returned_email,
-        list_name="In Review",
+        list_name=current_list_name,
     )
     assert {task["task_id"] for task in review_tasks} == {"00000045"}
 
     for task in review_tasks:
-        update_message = call_tool(project_management.update_task, task["task_id"], "list_name", "Completed")
+        update_message = call_tool(project_management.update_task, task["task_id"], "list_name", updated_list_name)
         assert update_message == "Task updated successfully."
 
     updated_lists = project_management.PROJECT_TASKS.set_index("task_id")["list_name"].to_dict()
-    assert updated_lists["00000045"] == "Completed"
+    assert updated_lists["00000045"] == updated_list_name
     assert updated_lists["00000046"] == "In Progress"
     assert updated_lists["00000047"] == "Backlog"
 
-
-# Template: "Move any of {name}'s tasks that are in review to completed"
-def test_integration_move_any_review_tasks_to_completed_question():
-    set_tasks(
-        [
-            {
-                "task_id": "00000048",
-                "task_name": "Validate deployment checklist",
-                "assigned_to_email": "aisha.chen@atlas.com",
-                "list_name": "In Progress",
-                "due_date": "2023-09-25",
-                "board": "Front end",
-            },
-            {
-                "task_id": "00000049",
-                "task_name": "Coordinate bug bash",
-                "assigned_to_email": "aisha.chen@atlas.com",
-                "list_name": "In Review",
-                "due_date": "2023-09-22",
-                "board": "Design",
-            },
-        ]
-    )
-
-    name = "Aisha"
-    emails = call_tool(company_directory.find_email_address, name)
-    assert len(emails) == 1
-    returned_email = str(emails[0])
-
-    review_tasks = call_tool(
-        project_management.search_tasks,
-        assigned_to_email=returned_email,
-        list_name="In Review",
-    )
-    assert {task["task_id"] for task in review_tasks} == {"00000049"}
-
-    for task in review_tasks:
-        update_message = call_tool(project_management.update_task, task["task_id"], "list_name", "Completed")
-        assert update_message == "Task updated successfully."
-
-    updated_lists = project_management.PROJECT_TASKS.set_index("task_id")["list_name"].to_dict()
-    assert updated_lists["00000048"] == "In Progress"
-    assert updated_lists["00000049"] == "Completed"

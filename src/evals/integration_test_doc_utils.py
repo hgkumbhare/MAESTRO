@@ -19,6 +19,7 @@ INTEGRATION_TESTS = {
 }
 
 _ORIGINAL_TOOL_DESCRIPTIONS = {}
+_TOOL_TESTS_CACHE = {}
 
 
 def _get_tool_description(tool):
@@ -52,24 +53,90 @@ def _get_test_source_by_name(test_file_path):
     return tests
 
 
-def _build_integration_test_documentation(test_file_path):
-    tests_by_name = _get_test_source_by_name(test_file_path)
+def _extract_tool_calls_from_test(test_source):
+    """
+    Extract tool function names called in a test.
+    Returns a set of tool names like: {'find_email_address', 'search_tasks', 'update_task'}
+    """
+    called_tools = set()
+    try:
+        tree = ast.parse(test_source)
+        for node in ast.walk(tree):
+            if isinstance(node, ast.Attribute):
+                # Matches patterns like: company_directory.find_email_address
+                # or project_management.search_tasks
+                if isinstance(node.value, ast.Name):
+                    # node.attr is the function name
+                    called_tools.add(node.attr)
+    except Exception as e:
+        print(f"Error extracting tool calls from test: {e}")
+    return called_tools
 
+
+def _build_tool_to_tests_mapping(test_file_path):
+    """
+    Build a mapping of tool names to the tests that call them.
+    Returns: {tool_name: [test_source1, test_source2, ...], ...}
+    """
+    tests_by_name = _get_test_source_by_name(test_file_path)
+    tool_to_tests = {}
+    
+    for test_name, test_source in tests_by_name.items():
+        called_tools = _extract_tool_calls_from_test(test_source)
+        for tool_name in called_tools:
+            if tool_name not in tool_to_tests:
+                tool_to_tests[tool_name] = []
+            tool_to_tests[tool_name].append(test_source)
+    
+    return tool_to_tests
+
+
+def _get_tool_name(tool):
+    """Extract the tool function name from a tool object."""
+    if hasattr(tool, "name"):
+        return tool.name
+    if hasattr(tool, "__name__"):
+        return tool.__name__
+    if hasattr(tool, "func") and hasattr(tool.func, "__name__"):
+        return tool.func.__name__
+    return None
+
+
+def _build_integration_test_documentation(test_sources):
+    """Build documentation string from a list of test sources."""
+    if not test_sources:
+        return ""
+    
     return "\n\nBehavior verified by integration tests:\n\n" + "\n\n".join(
-        f"```python\n{test_source}\n```" for test_source in tests_by_name.values()
+        f"```python\n{test_source}\n```" for test_source in test_sources
     )
 
 
 def apply_integration_test_documentation(tools):
+    # Build tool-to-tests mapping once
+    global _TOOL_TESTS_CACHE
+    if not _TOOL_TESTS_CACHE:
+        _TOOL_TESTS_CACHE = _build_tool_to_tests_mapping(_INTEGRATION_TEST_PATH)
+    
     for tool in tools:
         tool_key = id(tool)
         if tool_key not in _ORIGINAL_TOOL_DESCRIPTIONS:
             _ORIGINAL_TOOL_DESCRIPTIONS[tool_key] = _get_tool_description(tool)
 
+        tool_name = _get_tool_name(tool)
         description = _ORIGINAL_TOOL_DESCRIPTIONS[tool_key]
-        print('Previous description: ', description)
-        description += _build_integration_test_documentation(_INTEGRATION_TEST_PATH)
-        print('Updated description added integration tests: ', description)
+        
+        # Only add integration tests if this tool is called in any test
+        if tool_name and tool_name in _TOOL_TESTS_CACHE:
+            test_sources = _TOOL_TESTS_CACHE[tool_name]
+            print(f"Found {len(test_sources)} integration test(s) for tool '{tool_name}'")
+            print("-------------Description before-------------\n", description)
+            description += _build_integration_test_documentation(test_sources)
+            print(f"Added integration test documentation for tool '{tool_name}'")
+            print("-------------Description after-------------\n", description)
+        else:
+            print(f"No integration tests found for tool '{tool_name}'")
+
         _set_tool_description(tool, description)
 
     return tools
