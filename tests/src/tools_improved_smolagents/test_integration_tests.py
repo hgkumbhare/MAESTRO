@@ -20,6 +20,7 @@ sys.modules["smolagents"] = smolagents_stub
 
 project_management = importlib.import_module("src.tools_improved_smolagents.project_management")
 company_directory = importlib.import_module("src.tools_improved_smolagents.company_directory")
+customer_relationship_manager = importlib.import_module("src.tools_improved_smolagents.customer_relationship_manager")
 
 
 def call_tool(tool_obj, *args, **kwargs):
@@ -34,6 +35,11 @@ def call_tool(tool_obj, *args, **kwargs):
 def set_tasks(records):
     """Replace the module-level PROJECT_TASKS dataframe with the given records."""
     project_management.PROJECT_TASKS = pd.DataFrame(records, dtype=str)
+
+
+def set_customers(records):
+    """Replace the module-level CRM_DATA dataframe with the given customer records."""
+    customer_relationship_manager.CRM_DATA = pd.DataFrame(records, dtype=str)
 
 
 def test_move_in_progress_tasks_to_in_review():
@@ -330,3 +336,371 @@ def test_integration_move_unfinished_tasks_to_backlog():
     assert updated_lists["00000054"] == "Completed"
 
 
+
+def test_integration_update_cameron_anderson_status_to_qualified_in_crm():
+    set_customers(
+        [
+            {
+                "customer_id": "00000001",
+                "customer_name": "Cameron Anderson",
+                "customer_email": "cameron.anderson@example.com",
+                "customer_phone": "555-0183",
+                "last_contact_date": "2024-05-10",
+                "product_interest": "Software",
+                "status": "Lead",
+                "assigned_to_email": "grace.thompson@example.com",
+                "notes": "Initial discovery call completed.",
+                "follow_up_by": "2024-06-01",
+            }
+        ]
+    )
+
+    # Inputs: Update the status of Cameron Anderson to qualified in the CRM
+    name = "Cameron Anderson"
+    search_results = call_tool(
+        customer_relationship_manager.search_customers,
+        customer_name=name
+    )
+    assert len(search_results) == 1
+    customer = search_results[0]
+    assert customer["customer_name"] == name
+    assert customer["status"] == "Lead"
+
+    # Important: Do not call with parameters with empty string as argument like customer_email="".
+    update_message = call_tool(
+        customer_relationship_manager.update_customer,
+        customer["customer_id"],
+        "status",
+        "Qualified",
+    )
+    assert update_message == "Customer updated successfully."
+
+    updated_status = customer_relationship_manager.CRM_DATA.loc[
+        customer_relationship_manager.CRM_DATA["customer_id"] == customer["customer_id"],
+        "status",
+    ].values[0]
+    assert updated_status == "Qualified"
+
+
+def test_integration_delete_customer_from_crm():
+    set_customers(
+        [
+            {
+                "customer_id": "00000196",
+                "customer_name": "Kerry Robinson",
+                "customer_email": "kerry.robinson@example.com",
+                "customer_phone": "555-0199",
+                "last_contact_date": "2024-04-15",
+                "product_interest": "Consulting",
+                "status": "Proposal",
+                "assigned_to_email": "sofia.santos@example.com",
+                "notes": "Quarterly follow-up scheduled.",
+                "follow_up_by": "2024-06-10",
+            }
+        ]
+    )
+
+    # Inputs: Kerry Robinson is no longer a customer. Can you delete them from the CRM?
+    name = "Kerry Robinson"
+    search_results = call_tool(
+        customer_relationship_manager.search_customers,
+        customer_name=name,
+    )
+    assert len(search_results) == 1
+    customer = search_results[0]
+    assert customer["customer_name"] == name
+
+    # Important: Do not call with parameters with empty string as argument like customer_email="".
+    delete_message = call_tool(
+        customer_relationship_manager.delete_customer,
+        customer["customer_id"],
+    )
+    assert delete_message == "Customer deleted successfully."
+
+    assert customer["customer_id"] not in customer_relationship_manager.CRM_DATA["customer_id"].values
+    assert customer_relationship_manager.search_customers(customer_name=name) == []
+
+
+def test_integration_reassign_specific_leads_in_crm():
+    set_customers(
+        [
+            {
+                "customer_id": "00000210",
+                "customer_name": "customer 1",
+                "customer_email": "customer_1@example.com",
+                "customer_phone": "555-0170",
+                "last_contact_date": "2024-04-01",
+                "product_interest": "Services",
+                "status": "Lead",
+                "assigned_to_email": "lena.schmidt@atlas.com",
+                "notes": "Interested in managed services.",
+                "follow_up_by": "2024-06-05",
+            },
+            {
+                "customer_id": "00000211",
+                "customer_name": "customer 2",
+                "customer_email": "customer_1@example.com",
+                "customer_phone": "555-0171",
+                "last_contact_date": "2024-04-02",
+                "product_interest": "Services",
+                "status": "Lead",
+                "assigned_to_email": "lena.schmidt@atlas.com",
+                "notes": "Looking for consulting support.",
+                "follow_up_by": "2024-06-08",
+            },
+            {
+                "customer_id": "00000212",
+                "customer_name": "customer 3",
+                "customer_email": "customer_3@example.com",
+                "customer_phone": "555-0172",
+                "last_contact_date": "2024-04-03",
+                "product_interest": "Hardware",
+                "status": "Lead",
+                "assigned_to_email": "lena.schmidt@atlas.com",
+                "notes": "Interested in a hardware bundle.",
+                "follow_up_by": "2024-06-10",
+            },
+            {
+                "customer_id": "00000213",
+                "customer_name": "customer 4",
+                "customer_email": "customer_4@example.com",
+                "customer_phone": "555-0173",
+                "last_contact_date": "2024-04-04",
+                "product_interest": "Services",
+                "status": "Qualified",
+                "assigned_to_email": "lena.schmidt@atlas.com",
+                "notes": "Already moved past lead stage.",
+                "follow_up_by": "2024-06-12",
+            },
+        ]
+    )
+
+    # Inputs: We're moving all of Lena's leads that are interested in services to Sofia. Can you make that change in the CRM?
+    source_name = "Lena"
+    target_name = "Sofia"
+
+    source_emails = call_tool(company_directory.find_email_address, source_name)
+    assert len(source_emails) == 1
+    source_email = str(source_emails[0])
+
+    target_emails = call_tool(company_directory.find_email_address, target_name)
+    assert len(target_emails) == 1
+    target_email = str(target_emails[0])
+
+    matching_customers = call_tool(
+        customer_relationship_manager.search_customers,
+        assigned_to_email=source_email,
+        status="Lead",
+        product_interest="Services",
+    )
+    assert {customer["customer_id"] for customer in matching_customers} == {"00000210", "00000211"}
+
+    for customer in matching_customers:
+        update_message = call_tool(
+            customer_relationship_manager.update_customer,
+            customer["customer_id"],
+            "assigned_to_email",
+            target_email,
+        )
+        assert update_message == "Customer updated successfully."
+
+    updated_assignments = customer_relationship_manager.CRM_DATA.set_index("customer_id")["assigned_to_email"].to_dict()
+    assert updated_assignments["00000210"] == target_email
+    assert updated_assignments["00000211"] == target_email
+    assert updated_assignments["00000212"] == source_email
+    assert updated_assignments["00000213"] == source_email
+
+
+def test_integration_move_proposal_consulting_customers_not_contacted_for_weeks_to_lost_in_crm():
+    set_customers(
+        [
+            {
+                "customer_id": "00000214",
+                "customer_name": "Morgan Patel",
+                "customer_email": "morgan.patel@example.com",
+                "customer_phone": "555-0185",
+                "last_contact_date": "2024-03-01",
+                "product_interest": "Consulting",
+                "status": "Proposal",
+                "assigned_to_email": "emily.davis@example.com",
+                "notes": "Waiting on proposal response.",
+                "follow_up_by": "2024-06-01",
+            },
+            {
+                "customer_id": "00000215",
+                "customer_name": "Taylor Brooks",
+                "customer_email": "taylor.brooks@example.com",
+                "customer_phone": "555-0186",
+                "last_contact_date": "2024-04-01",
+                "product_interest": "Consulting",
+                "status": "Proposal",
+                "assigned_to_email": "emily.davis@example.com",
+                "notes": "Proposal sent; no response in 6 weeks.",
+                "follow_up_by": "2024-06-08",
+            },
+            {
+                "customer_id": "00000216",
+                "customer_name": "Jordan Lee",
+                "customer_email": "jordan.lee@example.com",
+                "customer_phone": "555-0187",
+                "last_contact_date": "2024-05-01",
+                "product_interest": "Consulting",
+                "status": "Proposal",
+                "assigned_to_email": "emily.davis@example.com",
+                "notes": "Proposal recently sent.",
+                "follow_up_by": "2024-06-20",
+            },
+            {
+                "customer_id": "00000217",
+                "customer_name": "Casey Nguyen",
+                "customer_email": "casey.nguyen@example.com",
+                "customer_phone": "555-0188",
+                "last_contact_date": "2024-03-10",
+                "product_interest": "Consulting",
+                "status": "Qualified",
+                "assigned_to_email": "emily.davis@example.com",
+                "notes": "Already qualified, not a proposal lead.",
+                "follow_up_by": "2024-06-12",
+            },
+            {
+                "customer_id": "00000218",
+                "customer_name": "Avery Morgan",
+                "customer_email": "avery.morgan@example.com",
+                "customer_phone": "555-0189",
+                "last_contact_date": "2024-03-01",
+                "product_interest": "Hardware",
+                "status": "Proposal",
+                "assigned_to_email": "emily.davis@example.com",
+                "notes": "Consulting product not relevant.",
+                "follow_up_by": "2024-06-15",
+            },
+        ]
+    )
+
+    # Inputs: Move all customers that haven't responded to a proposal for the consulting product in 6 weeks to lost in the CRM
+    cutoff_date = "2024-04-13"
+    eligible_customers = call_tool(
+        customer_relationship_manager.search_customers,
+        status="Proposal",
+        product_interest="Consulting",
+        last_contact_date_max=cutoff_date,
+    )
+
+    assert {customer["customer_id"] for customer in eligible_customers} == {"00000214", "00000215"}
+
+    for customer in eligible_customers:
+        update_message = call_tool(
+            customer_relationship_manager.update_customer,
+            customer["customer_id"],
+            "status",
+            "Lost",
+        )
+        assert update_message == "Customer updated successfully."
+
+    status_by_id = customer_relationship_manager.CRM_DATA.set_index("customer_id")["status"].to_dict()
+    assert status_by_id["00000214"] == "Lost"
+    assert status_by_id["00000215"] == "Lost"
+    assert status_by_id["00000216"] == "Proposal"
+    assert status_by_id["00000217"] == "Qualified"
+    assert status_by_id["00000218"] == "Proposal"
+
+
+def test_integration_add_quinn_robinson_as_new_lead_assigned_to_raj():
+    set_customers(
+        [
+            {
+                "customer_id": "00000196",
+                "customer_name": "Kerry Robinson",
+                "customer_email": "kerry.robinson@example.com",
+                "customer_phone": "555-0199",
+                "last_contact_date": "2024-04-15",
+                "product_interest": "Consulting",
+                "status": "Proposal",
+                "assigned_to_email": "sofia.santos@example.com",
+                "notes": "Quarterly follow-up scheduled.",
+                "follow_up_by": "2024-06-10",
+            }
+        ]
+    )
+
+    # Inputs: Add Quinn Robinson as a new lead in the crm and assign them to Raj
+    customer_name = "Quinn Robinson"
+    assigned_to_name = "Raj"
+
+    # Tool calling
+    assigned_to_emails = call_tool(company_directory.find_email_address, assigned_to_name)
+    assert len(assigned_to_emails) == 1
+    assigned_to_email = str(assigned_to_emails[0])
+
+    # Important: Do not call with parameters with empty string as argument like customer_email="".
+    customer_id = call_tool(
+        customer_relationship_manager.add_customer,
+        customer_name=customer_name,
+        assigned_to_email=assigned_to_email,
+        status="Lead",
+    )
+    assert customer_id is not None
+    assert customer_id != ""
+
+    # Verify the customer was added to CRM_DATA
+    search_results = call_tool(
+        customer_relationship_manager.search_customers,
+        customer_name=customer_name,
+    )
+    assert len(search_results) == 1
+    added_customer = search_results[0]
+    assert added_customer["customer_name"] == customer_name
+    assert added_customer["status"] == "Lead"
+    assert added_customer["assigned_to_email"] == assigned_to_email
+    assert added_customer["customer_id"] == customer_id
+
+
+
+def test_integration_reassign_alex_jackson_to_raj_in_crm():
+    set_customers(
+        [
+            {
+                "customer_id": "00000314",
+                "customer_name": "Alex Jackson",
+                "customer_email": "alex.jackson@example.com",
+                "customer_phone": "555-0184",
+                "last_contact_date": "2024-05-05",
+                "product_interest": "Consulting",
+                "status": "Qualified",
+                "assigned_to_email": "sophia.lee@example.com",
+                "notes": "Moving account ownership to Raj.",
+                "follow_up_by": "2024-06-15",
+            }
+        ]
+    )
+
+    # Inputs: Raj is taking over Alex Jackson. Can you reassign them in the CRM?
+    customer_name = "Alex Jackson"
+    new_owner_name = "Raj"
+
+    new_owner_emails = call_tool(company_directory.find_email_address, new_owner_name)
+    assert len(new_owner_emails) == 1
+    new_owner_email = str(new_owner_emails[0])
+
+    search_results = call_tool(
+        customer_relationship_manager.search_customers,
+        customer_name=customer_name,
+    )
+    assert len(search_results) == 1
+    customer = search_results[0]
+    assert customer["customer_name"] == customer_name
+    assert customer["assigned_to_email"] == "sophia.lee@example.com"
+
+    update_message = call_tool(
+        customer_relationship_manager.update_customer,
+        customer["customer_id"],
+        "assigned_to_email",
+        new_owner_email,
+    )
+    assert update_message == "Customer updated successfully."
+
+    updated_assignment = customer_relationship_manager.CRM_DATA.loc[
+        customer_relationship_manager.CRM_DATA["customer_id"] == customer["customer_id"],
+        "assigned_to_email",
+    ].values[0]
+    assert updated_assignment == new_owner_email
