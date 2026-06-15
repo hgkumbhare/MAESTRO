@@ -200,3 +200,133 @@ def test_integration_move_any_review_tasks_to_completed():
     assert updated_lists["00000046"] == "In Progress"
     assert updated_lists["00000047"] == "Backlog"
 
+
+def test_integration_reassign_yukis_in_progress_tasks_to_carlos():
+    set_tasks(
+        [
+            {
+                "task_id": "00000048",
+                "task_name": "Fix login bug",
+                "assigned_to_email": "yuki.tanaka@atlas.com",
+                "list_name": "In Progress",
+                "due_date": "2023-10-15",
+                "board": "Back end",
+            },
+            {
+                "task_id": "00000049",
+                "task_name": "Draft release notes",
+                "assigned_to_email": "yuki.tanaka@atlas.com",
+                "list_name": "In Progress",
+                "due_date": "2023-10-20",
+                "board": "Design",
+            },
+            {
+                "task_id": "00000050",
+                "task_name": "Organize team retro",
+                "assigned_to_email": "yuki.tanaka@atlas.com",
+                "list_name": "Backlog",
+                "due_date": "2023-11-01",
+                "board": "Analytics",
+            },
+            {
+                "task_id": "00000055",
+                "task_name": "Review sprint goals",
+                "assigned_to_email": "carlos.rodriguez@atlas.com",
+                "list_name": "Backlog",
+                "due_date": "2023-10-30",
+                "board": "Design",
+            },
+        ]
+    )
+
+    # Inputs: "reassign yuki's in progress tasks to carlos."
+    name = "Yuki"
+
+    # Tool calling
+    yuki_emails = call_tool(company_directory.find_email_address, name)
+    assert len(yuki_emails) == 1
+    yuki_email = str(yuki_emails[0])
+
+    carlos_emails = call_tool(company_directory.find_email_address, "Carlos")
+    assert len(carlos_emails) == 1
+    carlos_email = str(carlos_emails[0])
+
+    in_progress_tasks = call_tool(
+        project_management.search_tasks,
+        assigned_to_email=yuki_email,
+        list_name="In Progress",
+    )
+    assert {task["task_id"] for task in in_progress_tasks} == {"00000048", "00000049"}
+
+    for task in in_progress_tasks:
+        result = call_tool(project_management.update_task, task["task_id"], "assigned_to_email", carlos_email)
+        assert result == "Task updated successfully."
+
+    updated_assignees = project_management.PROJECT_TASKS.set_index("task_id")["assigned_to_email"].to_dict()
+    assert updated_assignees["00000048"] == carlos_email
+    assert updated_assignees["00000049"] == carlos_email
+    assert updated_assignees["00000050"] == "yuki.tanaka@atlas.com"
+
+
+def test_integration_move_unfinished_tasks_to_backlog():
+    set_tasks(
+        [
+            {
+                "task_id": "00000051",
+                "task_name": "Complete user research summary",
+                "assigned_to_email": "chenwei.zhang@atlas.com",
+                "list_name": "In Progress",
+                "due_date": "2023-10-05",
+                "board": "Design",
+            },
+            {
+                "task_id": "00000052",
+                "task_name": "Update onboarding docs",
+                "assigned_to_email": "chenwei.zhang@atlas.com",
+                "list_name": "In Review",
+                "due_date": "2023-10-07",
+                "board": "Front end",
+            },
+            {
+                "task_id": "00000053",
+                "task_name": "Plan Q4 roadmap",
+                "assigned_to_email": "chenwei.zhang@atlas.com",
+                "list_name": "Backlog",
+                "due_date": "2023-11-01",
+                "board": "Analytics",
+            },
+            {
+                "task_id": "00000054",
+                "task_name": "Submit budget request",
+                "assigned_to_email": "chenwei.zhang@atlas.com",
+                "list_name": "Completed",
+                "due_date": "2023-09-30",
+                "board": "Back end",
+            },
+        ]
+    )
+
+    # Inputs: "can you move all of chenwei's unfinished tasks to the backlog?"
+    name = "Chenwei"
+
+    # Tool calling
+    emails = call_tool(company_directory.find_email_address, name)
+    assert len(emails) == 1
+    email = str(emails[0])
+
+    # Important: Unfinished tasks means in progress tasks only.
+    # In review tasks are not unfinished tasks.
+    all_tasks = call_tool(project_management.search_tasks, assigned_to_email=email, list_name="In progress")
+    assert {task["task_id"] for task in all_tasks} == {"00000051"}
+
+    for task in all_tasks:
+        result = call_tool(project_management.update_task, task["task_id"], "list_name", "Backlog")
+        assert result == "Task updated successfully."
+
+    updated_lists = project_management.PROJECT_TASKS.set_index("task_id")["list_name"].to_dict()
+    assert updated_lists["00000051"] == "Backlog"
+    assert updated_lists["00000052"] == "In Review"
+    assert updated_lists["00000053"] == "Backlog"
+    assert updated_lists["00000054"] == "Completed"
+
+
