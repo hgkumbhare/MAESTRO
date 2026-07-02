@@ -21,6 +21,8 @@ sys.modules["smolagents"] = smolagents_stub
 project_management = importlib.import_module("src.tools_improved_smolagents.project_management")
 company_directory = importlib.import_module("src.tools_improved_smolagents.company_directory")
 customer_relationship_manager = importlib.import_module("src.tools_improved_smolagents.customer_relationship_manager")
+analytics = importlib.import_module("src.tools_improved_smolagents.analytics")
+
 
 
 def call_tool(tool_obj, *args, **kwargs):
@@ -42,6 +44,14 @@ def set_customers(records):
     customer_relationship_manager.CRM_DATA = pd.DataFrame(records, dtype=str)
 
 
+def set_analytics_data(records):
+    """Replace the module-level analytics dataframe with the given records."""
+    analytics.ANALYTICS_DATA = pd.DataFrame(records, dtype=str)
+    analytics.ANALYTICS_DATA["user_engaged"] = analytics.ANALYTICS_DATA["user_engaged"] == "True"
+    analytics.PLOTS_DATA = pd.DataFrame(columns=["file_path"])
+
+
+# Start of integration tests for Project Management.
 def test_move_in_progress_tasks_to_in_review():
     set_tasks(
         [
@@ -334,9 +344,9 @@ def test_integration_move_unfinished_tasks_to_backlog():
     assert updated_lists["00000052"] == "In Review"
     assert updated_lists["00000053"] == "Backlog"
     assert updated_lists["00000054"] == "Completed"
+# End of integration tests for Project Management.
 
-
-
+# Start of integration tests for CRM.
 def test_integration_update_cameron_anderson_status_to_qualified_in_crm():
     set_customers(
         [
@@ -656,7 +666,7 @@ def test_integration_add_quinn_robinson_as_new_lead_assigned_to_raj():
 
 
 
-def test_integration_reassign_alex_jackson_to_raj_in_crm():
+def test_integration_reassign_customers_in_crm():
     set_customers(
         [
             {
@@ -704,3 +714,113 @@ def test_integration_reassign_alex_jackson_to_raj_in_crm():
         "assigned_to_email",
     ].values[0]
     assert updated_assignment == new_owner_email
+#  End of integration tests for CRM
+
+# Start of integration tests for Analytics tool.
+def test_integration_select_engaged_users_tool_for_engagement_request():
+    # User message: "How many engaged users were there on 2023-11-01 and 2023-11-02?"
+    # Expected tool call: analytics.engaged_users_count(time_min="2023-11-01", time_max="2023-11-02")
+    # Expected output: {"2023-11-01": 1, "2023-11-02": 1}
+    # Note: The model should select the engaged-users tool rather than the generic total-visits tool.
+    set_analytics_data(
+        [
+            {"date_of_visit": "2023-11-01", "visitor_id": "100", "page_views": "2", "session_duration_seconds": "10.0", "traffic_source": "direct", "user_engaged": "True"},
+            {"date_of_visit": "2023-11-02", "visitor_id": "101", "page_views": "3", "session_duration_seconds": "12.0", "traffic_source": "search engine", "user_engaged": "True"},
+            {"date_of_visit": "2023-11-02", "visitor_id": "102", "page_views": "1", "session_duration_seconds": "9.0", "traffic_source": "referral", "user_engaged": "False"},
+        ]
+    )
+
+    result = call_tool(analytics.engaged_users_count, time_min="2023-11-01", time_max="2023-11-02")
+    assert result == {"2023-11-01": 1, "2023-11-02": 1}
+
+
+def test_integration_use_total_visits_output_to_choose_histogram_date():
+    # User message: "Create a histogram of the busiest day in November 2023."
+    # Expected tool call: analytics.total_visits_count(time_min="2023-11-01", time_max="2023-11-30")
+    # Expected output: {"2023-11-01": 2, "2023-11-02": 3, "2023-11-03": 1}
+    # The returned value should be reused to choose the date for the follow-up plot.
+    set_analytics_data(
+        [
+            {"date_of_visit": "2023-11-01", "visitor_id": "200", "page_views": "1", "session_duration_seconds": "8.0", "traffic_source": "direct", "user_engaged": "False"},
+            {"date_of_visit": "2023-11-01", "visitor_id": "201", "page_views": "2", "session_duration_seconds": "10.0", "traffic_source": "search engine", "user_engaged": "True"},
+            {"date_of_visit": "2023-11-02", "visitor_id": "202", "page_views": "3", "session_duration_seconds": "11.0", "traffic_source": "social media", "user_engaged": "True"},
+            {"date_of_visit": "2023-11-02", "visitor_id": "203", "page_views": "4", "session_duration_seconds": "13.0", "traffic_source": "referral", "user_engaged": "True"},
+            {"date_of_visit": "2023-11-02", "visitor_id": "204", "page_views": "2", "session_duration_seconds": "9.0", "traffic_source": "direct", "user_engaged": "False"},
+            {"date_of_visit": "2023-11-03", "visitor_id": "205", "page_views": "1", "session_duration_seconds": "7.0", "traffic_source": "search engine", "user_engaged": "False"},
+        ]
+    )
+
+    visit_counts = call_tool(analytics.total_visits_count, time_min="2023-11-01", time_max="2023-11-30")
+    assert visit_counts == {"2023-11-01": 2, "2023-11-02": 3, "2023-11-03": 1}
+    busiest_date = max(visit_counts, key=visit_counts.get)
+    plot_path = call_tool(analytics.create_plot, busiest_date, busiest_date, "total_visits", "histogram")
+    assert plot_path == "plots/2023-11-02_2023-11-02_total_visits_histogram.png"
+
+
+def test_integration_use_average_session_duration_output_to_choose_line_chart_date():
+    # User message: "Make a line chart of the day with the highest average session duration in November."
+    # Expected tool call: analytics.get_average_session_duration(time_min="2023-11-01", time_max="2023-11-03")
+    # Expected output: {"2023-11-01": 10.0, "2023-11-02": 15.5, "2023-11-03": 12.0}
+    # The returned value should be reused to choose the follow-up plot date.
+    set_analytics_data(
+        [
+            {"date_of_visit": "2023-11-01", "visitor_id": "300", "page_views": "2", "session_duration_seconds": "10.0", "traffic_source": "direct", "user_engaged": "False"},
+            {"date_of_visit": "2023-11-02", "visitor_id": "301", "page_views": "5", "session_duration_seconds": "15.5", "traffic_source": "direct", "user_engaged": "True"},
+            {"date_of_visit": "2023-11-02", "visitor_id": "302", "page_views": "2", "session_duration_seconds": "15.5", "traffic_source": "search engine", "user_engaged": "True"},
+            {"date_of_visit": "2023-11-03", "visitor_id": "303", "page_views": "2", "session_duration_seconds": "12.0", "traffic_source": "referral", "user_engaged": "False"},
+        ]
+    )
+
+    durations = call_tool(analytics.get_average_session_duration, time_min="2023-11-01", time_max="2023-11-03")
+    assert durations == {"2023-11-01": 10.0, "2023-11-02": 15.5, "2023-11-03": 12.0}
+    highest_duration_date = max(durations, key=durations.get)
+    plot_path = call_tool(analytics.create_plot, highest_duration_date, highest_duration_date, "session_duration_seconds", "line")
+    assert plot_path == "plots/2023-11-02_2023-11-02_session_duration_seconds_line.png"
+
+
+def test_integration_clarify_when_plot_type_is_missing():
+    # User message: "Create a chart of total visits from 2023-11-01 to 2023-11-03."
+    # Expected behavior: ask for the missing plot type instead of guessing and calling create_plot.
+    # Note: The model should request the missing required information before using any tool.
+    set_analytics_data(
+        [{"date_of_visit": "2023-11-01", "visitor_id": "400", "page_views": "1", "session_duration_seconds": "6.0", "traffic_source": "direct", "user_engaged": "False"}]
+    )
+
+    assert analytics.PLOTS_DATA.empty
+
+
+def test_integration_request_authentication_before_calling_any_tool():
+    # User message: "Create a chart of total visits from 2023-11-01 to 2023-11-03, but I have not authenticated yet."
+    # Expected behavior: ask the user to authenticate first; do not call analytics.create_plot or any other analytics tool.
+    # Note: The model should not invent an authentication token or proceed without consent.
+    set_analytics_data(
+        [{"date_of_visit": "2023-11-01", "visitor_id": "500", "page_views": "1", "session_duration_seconds": "7.0", "traffic_source": "direct", "user_engaged": "False"}]
+    )
+
+    assert analytics.PLOTS_DATA.empty
+
+
+def test_integration_execute_immediately_when_all_required_inputs_are_available():
+    # User message: "Plot total visits as a bar chart from 2023-11-01 to 2023-11-03."
+    # Expected tool call: analytics.create_plot(time_min="2023-11-01", time_max="2023-11-03", value_to_plot="total_visits", plot_type="bar")
+    # Expected output: "plots/2023-11-01_2023-11-03_total_visits_bar.png"
+    # Note: Once the metric, dates, and plot type are all known, the model should execute immediately.
+    set_analytics_data(
+        [{"date_of_visit": "2023-11-01", "visitor_id": "600", "page_views": "1", "session_duration_seconds": "8.0", "traffic_source": "direct", "user_engaged": "False"}]
+    )
+
+    plot_path = call_tool(analytics.create_plot, "2023-11-01", "2023-11-03", "total_visits", "bar")
+    assert plot_path == "plots/2023-11-01_2023-11-03_total_visits_bar.png"
+
+
+def test_integration_do_not_invent_missing_dates_or_metrics():
+    # User message: "Create a line chart of engaged users since yesterday."
+    # Expected behavior: ask for the missing date in the exact format "YYYY-MM-DD" instead of inventing a value.
+    # Note: The model should not invent arguments such as "2023-11-30" when the user did not provide them.
+    set_analytics_data(
+        [{"date_of_visit": "2023-11-01", "visitor_id": "700", "page_views": "3", "session_duration_seconds": "13.0", "traffic_source": "search engine", "user_engaged": "True"}]
+    )
+
+    assert analytics.PLOTS_DATA.empty
+
+# End of integration tests for Analytics tool.
