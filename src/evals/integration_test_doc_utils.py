@@ -12,7 +12,6 @@ _TESTS_DIR = (
     / "src"
     / "tools_improved_smolagents"
 )
-_INTEGRATION_TEST_PATH = _TESTS_DIR / "test_integration_tests.py"
 
 
 INTEGRATION_TESTS = {
@@ -62,12 +61,16 @@ def _extract_tool_calls_from_test(test_source):
     try:
         tree = ast.parse(test_source)
         for node in ast.walk(tree):
-            if isinstance(node, ast.Attribute):
-                # Matches patterns like: company_directory.find_email_address
-                # or project_management.search_tasks
-                if isinstance(node.value, ast.Name):
-                    # node.attr is the function name
-                    called_tools.add(node.attr)
+            if not isinstance(node, ast.Call):
+                continue
+            func = node.func
+            if isinstance(func, ast.Name):          # bare call: create_event(...)
+                name = func.id
+            elif isinstance(func, ast.Attribute):   # qualified: calendar.create_event(...)
+                name = func.attr
+            else:
+                continue
+            called_tools.add(name)
     except Exception as e:
         print(f"Error extracting tool calls from test: {e}")
     return called_tools
@@ -107,16 +110,16 @@ def _build_integration_test_documentation(test_sources):
     if not test_sources:
         return ""
     
-    return "\n\nBehavior verified by integration tests:\n\n" + "\n\n".join(
+    return "\n\nRead below carefully to understand tool dependency:\n\n" + "\n\n".join(
         f"```python\n{test_source}\n```" for test_source in test_sources
     )
 
 
-def apply_integration_test_documentation(tools):
+def apply_integration_test_documentation(tools, integration_test_path):
     # Build tool-to-tests mapping once
     global _TOOL_TESTS_CACHE
     if not _TOOL_TESTS_CACHE:
-        _TOOL_TESTS_CACHE = _build_tool_to_tests_mapping(_INTEGRATION_TEST_PATH)
+        _TOOL_TESTS_CACHE = _build_tool_to_tests_mapping(integration_test_path)
     
     for tool in tools:
         tool_key = id(tool)
