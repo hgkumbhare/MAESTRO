@@ -57,6 +57,7 @@ from src.tools_improved_smolagents.toolkits import (
 
 from src.evals.unit_test_doc_utils import apply_unit_test_documentation
 from src.evals.integration_test_doc_utils import apply_integration_test_documentation
+from src.evals.tool_dependency_skills_doc_utils import apply_tool_dependency_skills
 
 from tqdm.auto import tqdm
 
@@ -679,7 +680,7 @@ def get_latest_results_from_dir(results_root_dir, model, tool, print_errors=Fals
         )
 
 
-def get_toolkits(toolkits, tool_set='original', include_unit_tests=False, integration_tests_path=""):
+def get_toolkits(toolkits, tool_set='original', include_unit_tests=False, integration_tests_path="", tool_dependency_skills_path=""):
     """Get the toolkits to be used for the agent."""
     tools = []
     
@@ -715,6 +716,8 @@ def get_toolkits(toolkits, tool_set='original', include_unit_tests=False, integr
         return apply_unit_test_documentation(tools, include_unit_tests=include_unit_tests)
     elif integration_tests_path:
         return apply_integration_test_documentation(tools, integration_tests_path)
+    elif tool_dependency_skills_path:
+        return apply_tool_dependency_skills(tools, tool_dependency_skills_path)
     return tools
 
 
@@ -727,6 +730,8 @@ def generate_results(
     tool_set='original',
     include_unit_tests=False,
     integration_tests_path="",
+    tool_dependency_skills_path="",
+    additional_prompt_text="",
 ):
     """Generates results for a given model and set of queries. Saves the results to a csv file."""
     toolkits = ["email", "calendar", "analytics", "project_management", "customer_relationship_manager"]
@@ -794,14 +799,14 @@ def generate_results(
         elif tool_set == 'improved':
             actual_tool_set = 'smolagents_improved'
     
-    tools = get_toolkits(toolkits, tool_set=actual_tool_set, include_unit_tests=include_unit_tests, integration_tests_path=integration_tests_path)
+    tools = get_toolkits(toolkits, tool_set=actual_tool_set, include_unit_tests=include_unit_tests, integration_tests_path=integration_tests_path, tool_dependency_skills_path=tool_dependency_skills_path)
 
     for i, query in tqdm(list(enumerate(queries))):
         reset_all()
 
         if tool_selection == "domains":
             toolkits = queries_df["domains"].iloc[i].strip("][").replace("'", "").split(", ")
-            tools = get_toolkits(toolkits, tool_set=actual_tool_set, include_unit_tests=include_unit_tests)
+            tools = get_toolkits(toolkits, tool_set=actual_tool_set, include_unit_tests=include_unit_tests, tool_dependency_skills_path=tool_dependency_skills_path)
 
         if agent_engine == "smolagents":
             # Initialize the appropriate model based on model_name
@@ -847,6 +852,7 @@ def generate_results(
 
             prompt_template = (
                 f"Today's date is {HARDCODED_CURRENT_TIME.strftime('%A')}, {HARDCODED_CURRENT_TIME.date()} and the current time is {HARDCODED_CURRENT_TIME.time()}. Remember the current date and time when answering queries. You must not schedule meetings that start before 9am or end after 6pm"
+                + additional_prompt_text
             )
 
             error = ""
@@ -876,6 +882,7 @@ def generate_results(
             )
             agent.agent.llm_chain.prompt.messages[0].prompt.template = (
                 f"Today's date is {HARDCODED_CURRENT_TIME.strftime('%A')}, {HARDCODED_CURRENT_TIME.date()} and the current time is {HARDCODED_CURRENT_TIME.time()}. Remember the current date and time when answering queries. Meetings must not start before 9am or end after 6pm."
+                + additional_prompt_text
                 + agent.agent.llm_chain.prompt.messages[0].prompt.template
             )
             error = ""

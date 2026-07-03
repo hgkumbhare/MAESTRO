@@ -66,6 +66,19 @@ parser.add_argument(
     help="Use integration tests path in tools doc instead of base tools"
 )
 
+parser.add_argument(
+    "--tool_dependency_skills_path",
+    type=str,
+    help="Path to a tool dependency skills file (dict of {tool_name: skill}). If provided, appends each tool's dependency skill to its documentation to reduce tool hallucination. Defaults to tests/src/tools_improved_smolagents/tool_dependency_skills.py."
+)
+
+parser.add_argument(
+    "--additional_prompt_text",
+    type=str,
+    default="",
+    help="Text appended to the prompt."
+)
+
 args = parser.parse_args()
 
 if __name__ == "__main__":
@@ -78,6 +91,8 @@ if __name__ == "__main__":
         agent_engine=args.agent_engine,
         tool_set="improved" if args.use_improved_tools else "original",
         include_unit_tests=args.include_unit_tests,
-        integration_tests_path=args.integration_tests_path
+        integration_tests_path=args.integration_tests_path,
+        tool_dependency_skills_path=args.tool_dependency_skills_path,
+        additional_prompt_text=args.additional_prompt_text,
     )
     calculate_metrics(ground_truth, results)
