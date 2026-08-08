@@ -55,6 +55,10 @@ from src.tools_improved_smolagents.toolkits import (
     reset_all as reset_all_improved_smol
 )
 
+from src.evals.constants import (
+    TEMPERATURE, RETRY_TEMPERATURE, MAX_ITERATIONS, MAX_EXECUTION_TIME,
+    SMOLAGENTS_RETRY_WAIT, SMOLAGENTS_RETRY_MAX_ATTEMPTS, SEED,
+)
 from src.evals.unit_test_doc_utils import apply_unit_test_documentation
 from src.evals.integration_test_doc_utils import apply_integration_test_documentation
 from src.evals.tool_dependency_skills_doc_utils import apply_tool_dependency_skills
@@ -63,6 +67,12 @@ from tqdm.auto import tqdm
 
 from smolagents import CodeAgent
 from smolagents.models import LiteLLMModel
+
+# Shorten smolagents' rate-limit backoff (default 60s base × 3 → up to ~3 min/query).
+# These module constants are read when LiteLLMModel builds its retryer, so patch before use.
+import smolagents.models as _smol_models
+_smol_models.RETRY_WAIT = SMOLAGENTS_RETRY_WAIT
+_smol_models.RETRY_MAX_ATTEMPTS = SMOLAGENTS_RETRY_MAX_ATTEMPTS
 
 
 DOMAINS = [calendar, email, analytics, project_management, customer_relationship_manager]
@@ -732,8 +742,14 @@ def generate_results(
     integration_tests_path="",
     tool_dependency_skills_path="",
     additional_prompt_text="",
+    extra_system_prompt="",
+    verify=None,
 ):
-    """Generates results for a given model and set of queries. Saves the results to a csv file."""
+    """Generates results for a given model and set of queries. Saves the results to a csv file.
+
+    extra_system_prompt: optional text prepended to the agent's system prompt (used to inject
+    tool-interaction skill cards for the 'skills' condition; empty for base/improved).
+    """
     toolkits = ["email", "calendar", "analytics", "project_management", "customer_relationship_manager"]
     queries_df = pd.read_csv(queries_path)
     queries = queries_df["query"].tolist()
@@ -744,23 +760,23 @@ def generate_results(
         llm = OpenAI(
             model_name="gpt-3.5-turbo-instruct",
             openai_api_key=OPENAI_KEY,
-            temperature=0,
-            model_kwargs={"seed": 42},
+            temperature=TEMPERATURE,
+            model_kwargs={"seed": SEED},
         )
     elif model_name.startswith("gpt"):
         OPENAI_KEY = open("openai_key.txt", "r").read()
         llm = ChatOpenAI(
             model_name=model_name,
             openai_api_key=OPENAI_KEY,
-            temperature=0,
-            model_kwargs={"seed": 42},
+            temperature=TEMPERATURE,
+            model_kwargs={"seed": SEED},
         )
     elif model_name == "llama3.3-70b":
         OPENROUTER_KEY = open("openrouter_key.txt", "r").read()
         llm = ChatOpenAI(
             model_name="meta-llama/llama-3.3-70b-instruct",
             api_key = OPENROUTER_KEY,
-            temperature=0,
+            temperature=TEMPERATURE,
             base_url = 'https://openrouter.ai/api/v1'
         )
     elif model_name == "llama3.1-8b":
@@ -768,7 +784,7 @@ def generate_results(
         llm = ChatOpenAI(
             model="meta-llama/llama-3.1-8b-instruct",
             api_key = OPENROUTER_KEY,
-            temperature=0,
+            temperature=TEMPERATURE,
             base_url = 'https://openrouter.ai/api/v1'
         )
     elif model_name == "qwen-2.5-72b":
@@ -776,7 +792,7 @@ def generate_results(
         llm = ChatOpenAI(
             model="qwen/qwen-2.5-72b-instruct",
             api_key = OPENROUTER_KEY,
-            temperature=0,
+            temperature=TEMPERATURE,
             base_url = 'https://openrouter.ai/api/v1'
         )
     elif model_name == "qwen-2.5-7b":
@@ -784,7 +800,7 @@ def generate_results(
         llm = ChatOpenAI(
             model="qwen/qwen-2.5-7b-instruct",
             api_key = OPENROUTER_KEY,
-            temperature=0,
+            temperature=TEMPERATURE,
             base_url = 'https://openrouter.ai/api/v1'
         )
 
@@ -804,6 +820,10 @@ def generate_results(
     for i, query in tqdm(list(enumerate(queries))):
         reset_all()
 
+        # extra_system_prompt may be a string (same for all queries) or a callable(query)
+        # that returns per-query text (used for trigger-gated skill injection).
+        esp = extra_system_prompt(query) if callable(extra_system_prompt) else extra_system_prompt
+
         if tool_selection == "domains":
             toolkits = queries_df["domains"].iloc[i].strip("][").replace("'", "").split(", ")
             tools = get_toolkits(toolkits, tool_set=actual_tool_set, include_unit_tests=include_unit_tests, tool_dependency_skills_path=tool_dependency_skills_path)
@@ -811,65 +831,79 @@ def generate_results(
         if agent_engine == "smolagents":
             # Initialize the appropriate model based on model_name
             if model_name.startswith("gpt"):
-                model = LiteLLMModel(model_id=model_name, api_key=OPENAI_KEY, temperature=0.7)
+                model = LiteLLMModel(model_id=model_name, api_key=OPENAI_KEY, temperature=TEMPERATURE, seed=SEED)
             elif model_name == "llama3.3-70b":
                 OPENROUTER_KEY = open("openrouter_key.txt", "r").read()
                 model = LiteLLMModel(
                     model_id="openrouter/meta-llama/llama-3.3-70b-instruct",
                     api_key = OPENROUTER_KEY,
-                    temperature=0.7,
+                    temperature=TEMPERATURE,
+                    seed=SEED,
                 )
             elif model_name == "llama3.1-8b":
                 OPENROUTER_KEY = open("openrouter_key.txt", "r").read()
                 model = LiteLLMModel(
                     model_id="openrouter/meta-llama/llama-3.1-8b-instruct",
                     api_key = OPENROUTER_KEY,
-                    temperature=0.7,
+                    temperature=TEMPERATURE,
+                    seed=SEED,
                 )
             elif model_name == "qwen-2.5-72b":
                 OPENROUTER_KEY = open("openrouter_key.txt", "r").read()
                 model = LiteLLMModel(
                     model_id="openrouter/qwen/qwen-2.5-72b-instruct",
                     api_key = OPENROUTER_KEY,
-                    temperature=0.7,
+                    temperature=TEMPERATURE,
+                    seed=SEED,
                 )
             elif model_name == "qwen-2.5-7b":
                 OPENROUTER_KEY = open("openrouter_key.txt", "r").read()
                 model = LiteLLMModel(
                     model_id="openrouter/qwen/qwen-2.5-7b-instruct",
                     api_key = OPENROUTER_KEY,
-                    temperature=0.7,
+                    temperature=TEMPERATURE,
+                    seed=SEED,
                 )
             
-            GLOBAL_TOOL_TRACKER.clear()
-            reset_all()
-
-            # Create the SmolAgents agent
-            agent = CodeAgent(
-                tools=tools,
-                model=model,
-            )
-
             prompt_template = (
-                f"Today's date is {HARDCODED_CURRENT_TIME.strftime('%A')}, {HARDCODED_CURRENT_TIME.date()} and the current time is {HARDCODED_CURRENT_TIME.time()}. Remember the current date and time when answering queries. You must not schedule meetings that start before 9am or end after 6pm"
+                esp
+                + f"Today's date is {HARDCODED_CURRENT_TIME.strftime('%A')}, {HARDCODED_CURRENT_TIME.date()} and the current time is {HARDCODED_CURRENT_TIME.time()}. Remember the current date and time when answering queries. You must not schedule meetings that start before 9am or end after 6pm"
                 + additional_prompt_text
             )
 
+            # Actor-critic verify-and-correct loop (E1.8). verify = {"max_iters", "critic"} or None.
+            # The critic sees only (query, tool calls, final answer) — NEVER the gold answer — and
+            # returns (ok, feedback); on fail the actor re-runs with that feedback appended.
+            max_iters = (verify or {}).get("max_iters", 1)
+            critic = (verify or {}).get("critic")
             error = ""
             function_calls = []
             response = ""
-            try:
-                response = agent.run(prompt_template+"\n"+query)
-            except Exception as e:
-                error = str(e)
+            feedback = ""
+            for _it in range(max_iters):
+                GLOBAL_TOOL_TRACKER.clear()
+                reset_all()
+                agent = CodeAgent(tools=tools, model=model)
+                task = prompt_template + "\n" + query
+                if feedback:
+                    task += ("\n\nA reviewer checked your previous attempt and said: "
+                             + feedback + "\nRedo the task from scratch, fixing this.")
+                error = ""
+                try:
+                    response = agent.run(task)
+                except Exception as e:
+                    error = str(e)
+                tracker_items = list(GLOBAL_TOOL_TRACKER)  # each has function_name/parameters/output
+                function_calls = [convert_agent_action_to_function_call_hf(item)
+                                  for item in tracker_items]
+                GLOBAL_TOOL_TRACKER.clear()
+                if not critic or error or _it == max_iters - 1:
+                    break
+                # critic sees the calls WITH their observations (outputs) — never the gold answer
+                ok, feedback = critic(query, tracker_items, response)
+                if ok:
+                    break
 
-            function_calls = []
-
-            for item in GLOBAL_TOOL_TRACKER:
-                function_calls.append(convert_agent_action_to_function_call_hf(item))
-
-            GLOBAL_TOOL_TRACKER.clear()
-            
         else:  # Default to langchain
             agent = initialize_agent(
                 llm=llm,
@@ -877,11 +911,12 @@ def generate_results(
                 tools=tools,
                 verbose=True,
                 return_intermediate_steps=True,
-                max_iterations=20,
-                max_execution_time=120,
+                max_iterations=MAX_ITERATIONS,
+                max_execution_time=MAX_EXECUTION_TIME,
             )
             agent.agent.llm_chain.prompt.messages[0].prompt.template = (
-                f"Today's date is {HARDCODED_CURRENT_TIME.strftime('%A')}, {HARDCODED_CURRENT_TIME.date()} and the current time is {HARDCODED_CURRENT_TIME.time()}. Remember the current date and time when answering queries. Meetings must not start before 9am or end after 6pm."
+                esp
+                + f"Today's date is {HARDCODED_CURRENT_TIME.strftime('%A')}, {HARDCODED_CURRENT_TIME.date()} and the current time is {HARDCODED_CURRENT_TIME.time()}. Remember the current date and time when answering queries. Meetings must not start before 9am or end after 6pm."
                 + additional_prompt_text
                 + agent.agent.llm_chain.prompt.messages[0].prompt.template
             )
@@ -894,7 +929,7 @@ def generate_results(
                     function_calls.append(convert_agent_action_to_function_call(step[-2]))
                 if len(response["intermediate_steps"]) == 0:
                     for retry_num in range(num_retrys):
-                        temprature_for_retry = 0.5
+                        temprature_for_retry = RETRY_TEMPERATURE
                         agent.agent.llm_chain.llm.temperature=temprature_for_retry
                         print(f"No actions taken. Retry {retry_num + 1} of {num_retrys}")
                         response = agent({"input": query})

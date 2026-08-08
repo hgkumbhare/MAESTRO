@@ -3,6 +3,7 @@ venv/
 .DS_Store
 __pycache__/
 openai_key.txt
+openai_admin_key.txt
 anthropic_key.txt
 anyscale_key.txt
 downloads
@@ -12,3 +13,14 @@ downloads
 data/results/
 .claude/settings.local.json
 data/processed/sampled_queries_and_answers/*
+openrouter_key.txt
+*_key.txt
+
+# Experiment scratch (regenerable; keep done_store + raw + metrics.json + RESULTS.md)
+experiments/*/results/parallel/
+experiments/*/results/checkpoints/
+experiments/*/*/results/parallel/
+experiments/*/*/results/checkpoints/
+**/_combined_queries.csv
+**/_q_*.csv
+run_driver.log

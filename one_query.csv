@@ -1,0 +1,2 @@
+query,answer,base_template,chosen_template,domains
+Delete my first meeting on December 13,"['calendar.delete_event.func(event_id=""00000256"")']",Cancel my first meeting on {natural_language_date},Delete my first meeting on {natural_language_date},['calendar']

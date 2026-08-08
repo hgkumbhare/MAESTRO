@@ -4,6 +4,21 @@ MAESTRO: Method for Agent Enhancement through Standardized Tool Reliability Opti
 
 This Repo and code is forked from [Workbench](https://github.com/olly-styles/WorkBench.git)
 
+> ## 📌 New here? Start with [`docs/start_here/`](docs/start_here/)
+> The onboarding folder — findings, how the system works, the full experiment log, and the prompt structure.
+>
+> **What this project adds to WorkBench:** a *leakage-safe* method to cut tool-interaction failures —
+> per-query **gated tool-interaction skills** + an **actor-critic verify-and-correct** mechanism — with
+> honest, cost-aware reporting (accuracy, non-empty-gold split, and **$ per correct answer**).
+>
+> **Headline (gpt-4o-mini, improved tools, 690 tasks):** base 50.6% → gated skills **58.1%** (+7.5;
+> real tasks +11.2) → + verify **60.4%** (+9.8; real tasks +13.3, lowest side-effects). Gated skills is
+> *cheaper per correct answer* than the baseline. Full tables + reproduction: [`docs/start_here/FINDINGS.md`](docs/start_here/FINDINGS.md).
+>
+> **Reproduce any experiment's numbers:** `python scripts/crunch_results.py experiments/<folder>`
+>
+> _The sections below are the original WorkBench benchmark instructions (setup, data, evaluation)._
+
 ## Installation
 
 Python Version: 3.10.11
