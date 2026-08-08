@@ -77,16 +77,30 @@ def fired_skills_llm(query, model="gpt-4o-mini-2024-07-18"):
         f'If none apply, return "none". Do not explain.\nValid ids: {ids}\n\n' + lines
     )
     from src.evals.constants import SEED
-    r = _openai().chat.completions.create(
-        model=model, messages=[{"role": "user", "content": prompt}],
-        temperature=0, seed=SEED, max_tokens=60)
+    from experiments.common.llm_client import chat_client_and_model, chat_kwargs
+    client, model_id = chat_client_and_model(model)  # gpt-* -> OpenAI, llama/qwen -> OpenRouter
+    # The gate call can fail transiently (budget OpenRouter providers 429/400/return
+    # choices=None). Retry a few times, then fall back to "no skill fired" so a flaky
+    # provider degrades a single query rather than crashing the whole run.
+    r = None
+    for _attempt in range(3):
+        try:
+            r = client.chat.completions.create(
+                model=model_id, messages=[{"role": "user", "content": prompt}],
+                temperature=0, seed=SEED, max_tokens=60, **chat_kwargs(model))
+            break
+        except Exception:
+            r = None
+    if r is None:
+        return []
     try:
         from experiments.common.usage_meter import record
         record("gate_llm", model, getattr(r.usage, "prompt_tokens", 0),
                getattr(r.usage, "completion_tokens", 0))
     except Exception:
         pass
-    text = (r.choices[0].message.content or "").lower()
+    choices = getattr(r, "choices", None) or []
+    text = ((choices[0].message.content if choices else "") or "").lower()
     return [c for c in SKILL_CARDS if c["id"].lower() in text]
 
 

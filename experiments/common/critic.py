@@ -73,14 +73,17 @@ Otherwise reply "FAIL: <one specific, actionable instruction telling the agent h
 
 def make_critic(model="gpt-4o-mini-2024-07-18"):
     from src.evals.constants import SEED
+    from experiments.common.llm_client import chat_client_and_model, chat_kwargs
+    client, model_id = chat_client_and_model(model)  # gpt-* -> OpenAI, llama/qwen -> OpenRouter
+    extra = chat_kwargs(model)
 
     def critic(query, trace_items, response):
         calls = _format_trace(trace_items)
         prompt = _PROMPT.format(query=query, calls=calls, response=response)
         try:
-            r = _openai().chat.completions.create(
-                model=model, messages=[{"role": "user", "content": prompt}],
-                temperature=0, seed=SEED, max_tokens=120)
+            r = client.chat.completions.create(
+                model=model_id, messages=[{"role": "user", "content": prompt}],
+                temperature=0, seed=SEED, max_tokens=120, **extra)
             t = (r.choices[0].message.content or "").strip()
             try:
                 from experiments.common.usage_meter import record

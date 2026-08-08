@@ -1,0 +1,17 @@
+\loop
+Analyze all tools defined in: <tool\_path>
+For each tool:
+Examine its input parameters, output parameters, and functionality.
+Identify dependencies between tools by determining which other tools can produce the values required for each input parameter.
+For every input parameter, identify all relevant upstream tools whose outputs can be used to populate that parameter.
+Generate a concise skill describing how to obtain the required inputs using other available tools before invoking the current tool. The skill should guide an LLM toward the correct tool sequence and discourage guessing, fabricated values, or incorrect parameter usage.
+The goal is to reduce tool hallucination by explicitly documenting tool dependencies and the correct acquisition path for each required input.
+Return only a Python dictionary (or JSON object) in the following format:
+{
+    "<tool_name>": "<skill description>",
+    "<tool_name>": "<skill description>",
+    ...
+}
+
+Do not include explanations, markdown, or any additional text. Output only the mapping from tool name to skill.
+Write the output to file <output\_path>

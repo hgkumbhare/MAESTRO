@@ -13,15 +13,24 @@ from experiments.common.skills import render_skills
 
 # tool_set is a RUN-LEVEL knob (from config), NOT per-condition — all conditions in a run share
 # the same tool descriptions (team standard = "improved"). Conditions vary only:
-#   include_integration_tests : the LEAKY integration tests (E0/S3) — only the 'improved' arm uses them
+#   integration_tests_path : the LEAKY integration tests (E0/S3) — only the 'improved' arm uses them
 #   skills : "none" | "all" (always-on, E1) | "gated" (trigger-gated per query, E1.5)
+
+INTEGRATION_TEST_PATH = '/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/tests/src/tools_improved_smolagents/test_integration_tests_loop.py'
+TOOL_DEPENDENCY_SKILLS = '/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/tests/src/tools_improved_smolagents/tool_dependency_skills.py'
+
 CONDITIONS = {
-    "base": dict(include_integration_tests=False, skills="none", verify=False),
-    "improved": dict(include_integration_tests=True, skills="none", verify=False),  # + leaky tests (E0)
-    "skills": dict(include_integration_tests=False, skills="all", verify=False),
-    "skills_gated": dict(include_integration_tests=False, skills="gated", verify=False),
+    "base": dict(skills="none", verify=False),
+    "with_integration_test": dict(integration_tests_path=INTEGRATION_TEST_PATH, skills="none", verify=False),  # + leaky tests (E0)
+    "with_tool_dependency_skills": dict(tool_dependency_skills_path=TOOL_DEPENDENCY_SKILLS, skills="none", verify=False, additional_prompt_text=""),  # + leaky tests (E0)
+    "skills": dict(skills="all", verify=False),
+    "skills_gated": dict(skills="gated", verify=False),
+    # actor-critic verify-and-correct alone, no skills (isolates the critic mechanism)
+    "verify": dict(skills="none", verify=True),
     # actor-critic verify-and-correct on top of gated skills (E1.8)
-    "skills_gated_verify": dict(include_integration_tests=False, skills="gated", verify=True),
+    "skills_gated_verify": dict(skills="gated", verify=True),
+    "skills_gated_verify_with_tool_dependency_skills": dict(tool_dependency_skills_path=TOOL_DEPENDENCY_SKILLS, skills="gated", verify=True),
+    "skills_gated_verify_with_integration_test_and_tool_dependency_skills": dict(integration_tests_path=INTEGRATION_TEST_PATH, tool_dependency_skills_path=TOOL_DEPENDENCY_SKILLS, skills="gated", verify=True),
 }
 
 
@@ -64,7 +73,9 @@ def run_condition(name: str, queries_path: str, model: str, tool_selection: str 
         tool_selection=tool_selection,
         agent_engine=agent_engine,
         tool_set=tool_set,
-        include_integration_tests=cfg["include_integration_tests"],
+        integration_tests_path=cfg.get("integration_tests_path", ""),
+        tool_dependency_skills_path=cfg.get("tool_dependency_skills_path", ""),
         extra_system_prompt=extra,
         verify=verify,
+        additional_prompt_text=cfg.get("additional_prompt_text", "")
     )

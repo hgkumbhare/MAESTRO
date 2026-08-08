@@ -839,6 +839,7 @@ def generate_results(
                     api_key = OPENROUTER_KEY,
                     temperature=TEMPERATURE,
                     seed=SEED,
+                    extra_body={"provider": {"sort": "price", "ignore": ["Novita"]}},  # cheapest RELIABLE backend
                 )
             elif model_name == "llama3.1-8b":
                 OPENROUTER_KEY = open("openrouter_key.txt", "r").read()
@@ -847,6 +848,7 @@ def generate_results(
                     api_key = OPENROUTER_KEY,
                     temperature=TEMPERATURE,
                     seed=SEED,
+                    extra_body={"provider": {"sort": "price", "ignore": ["Novita"]}},  # cheapest RELIABLE backend
                 )
             elif model_name == "qwen-2.5-72b":
                 OPENROUTER_KEY = open("openrouter_key.txt", "r").read()
@@ -855,6 +857,7 @@ def generate_results(
                     api_key = OPENROUTER_KEY,
                     temperature=TEMPERATURE,
                     seed=SEED,
+                    extra_body={"provider": {"sort": "price", "ignore": ["Novita"]}},  # cheapest RELIABLE backend
                 )
             elif model_name == "qwen-2.5-7b":
                 OPENROUTER_KEY = open("openrouter_key.txt", "r").read()
@@ -863,6 +866,7 @@ def generate_results(
                     api_key = OPENROUTER_KEY,
                     temperature=TEMPERATURE,
                     seed=SEED,
+                    extra_body={"provider": {"sort": "price", "ignore": ["Novita"]}},  # cheapest RELIABLE backend
                 )
             
             prompt_template = (
