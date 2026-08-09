@@ -1,0 +1,29 @@
+{
+  "experiment": "E2_abalation",
+  "status": "scaffold",
+  "model": "gpt-4o-mini-2024-07-18",
+  "queries_paths": [
+    "data/processed/queries_and_answers/project_management_queries_and_answers.csv"
+  ],
+  "conditions": [
+    "base",
+    "with_integration_test",
+    "with_tool_dependency_skills",
+    "skills",
+    "skills_gated",
+    "skills_gated_verify",
+    "skills_gated_verify_with_tool_dependency_skills",
+    "skills_gated_verify_with_integration_test_and_tool_dependency_skills"
+  ],
+  "agent_engine": "smolagents",
+  "seed": 1,
+  "checkpoint_every": 25,
+  "parallel": true,
+  "max_workers": 6,
+  "stagger_seconds": 8,
+  "gating": {
+    "method": "llm"
+  },
+  "tool_set": "improved",
+  "notes": "TOOL DEPENDENCY GRAPH mechanism. Explicit producer->consumer structure (graph.py, derived from tool signatures, leakage-safe) injected as context. Conditions: base (seedable from E1.7) / graph (static full graph) / graph_gated (query-selected subgraph). Not runnable until the `graph`/`graph_gated` conditions are wired via a LOCAL conditions builder (do not edit experiments/common while other experiments run). See README.md."
+}

@@ -1,0 +1,101 @@
+{
+  "config": {
+    "experiment": "E12_qwen7b_base_all",
+    "status": "run",
+    "model": "qwen-2.5-7b",
+    "conditions": [
+      "base",
+      "skills_gated_verify_with_tool_dependency_skills"
+    ],
+    "agent_engine": "smolagents",
+    "seed": 42,
+    "checkpoint_every": 25,
+    "stagger_seconds": 8,
+    "gating": {
+      "method": "llm"
+    },
+    "tool_set": "improved",
+    "verify": {
+      "max_iters": 2,
+      "critic_model": "qwen-2.5-7b"
+    },
+    "notes": "E12 Qwen 2.5 7B base vs All on multi_domain; actor+gate+critic all use qwen-2.5-7b via OpenRouter.",
+    "condition_queries": {
+      "base": "/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_model/qwen-2.5-7b/multi_domain/results/parallel/shard_01/_q_base.csv",
+      "skills_gated_verify_with_tool_dependency_skills": "/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_model/qwen-2.5-7b/multi_domain/results/parallel/shard_01/_q_skills_gated_verify_with_tool_dependency_skills.csv"
+    }
+  },
+  "records": [
+    {
+      "experiment": "E12_qwen7b_base_all",
+      "model": "qwen-2.5-7b",
+      "seed": 42,
+      "condition": "base",
+      "domain": "multi_domain",
+      "split_grain": "domain",
+      "split": "all",
+      "n": 53,
+      "accuracy": 22.6,
+      "side_effect_rate": 43.4,
+      "delta_vs_base": null
+    },
+    {
+      "experiment": "E12_qwen7b_base_all",
+      "model": "qwen-2.5-7b",
+      "seed": 42,
+      "condition": "skills_gated_verify_with_tool_dependency_skills",
+      "domain": "multi_domain",
+      "split_grain": "domain",
+      "split": "all",
+      "n": 53,
+      "accuracy": 20.8,
+      "side_effect_rate": 39.6,
+      "delta_vs_base": -1.9
+    }
+  ],
+  "usage": {
+    "base": {
+      "prompt_tokens": 6387616,
+      "completion_tokens": 86831,
+      "total_tokens": 6474447,
+      "cost_usd": 0.264188,
+      "overhead_prompt_tokens": 0,
+      "overhead_completion_tokens": 0,
+      "overhead_cost_usd": 0.0,
+      "overhead_by_tag": {},
+      "total_cost_incl_overhead": 0.264188,
+      "langchain_cost_usd": 0.0,
+      "wall_seconds": 1284.5,
+      "sec_per_query": 24.24,
+      "n_queries": 53,
+      "note": "token/cost/latency cover freshly-run chunks only (resumed chunks not recounted); cost_usd is actor-only, total_cost_incl_overhead adds gate+critic."
+    },
+    "skills_gated_verify_with_tool_dependency_skills": {
+      "prompt_tokens": 14614225,
+      "completion_tokens": 164222,
+      "total_tokens": 14778447,
+      "cost_usd": 0.600991,
+      "overhead_prompt_tokens": 79906,
+      "overhead_completion_tokens": 1855,
+      "overhead_cost_usd": 0.003381,
+      "overhead_by_tag": {
+        "critic|qwen-2.5-7b": {
+          "prompt_tokens": 55938,
+          "completion_tokens": 1148,
+          "calls": 46
+        },
+        "gate_llm|qwen-2.5-7b": {
+          "prompt_tokens": 23968,
+          "completion_tokens": 707,
+          "calls": 53
+        }
+      },
+      "total_cost_incl_overhead": 0.604372,
+      "langchain_cost_usd": 0.0,
+      "wall_seconds": 2465.3,
+      "sec_per_query": 46.52,
+      "n_queries": 53,
+      "note": "token/cost/latency cover freshly-run chunks only (resumed chunks not recounted); cost_usd is actor-only, total_cost_incl_overhead adds gate+critic."
+    }
+  }
+}

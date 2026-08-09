@@ -1,0 +1,194 @@
+{
+  "config": {
+    "experiment": "E12_abalation",
+    "status": "run",
+    "model": "gpt-4o-mini-2024-07-18",
+    "queries_paths": [
+      "data/processed/queries_and_answers/analytics_queries_and_answers.csv"
+    ],
+    "conditions": [
+      "base",
+      "with_tool_dependency_skills",
+      "skills_gated",
+      "verify",
+      "skills_gated_verify_with_tool_dependency_skills"
+    ],
+    "agent_engine": "smolagents",
+    "seed": 1,
+    "checkpoint_every": 25,
+    "parallel": true,
+    "max_workers": 6,
+    "stagger_seconds": 8,
+    "gating": {
+      "method": "llm"
+    },
+    "tool_set": "improved",
+    "verify": {
+      "max_iters": 2,
+      "critic_model": "gpt-4o-mini-2024-07-18"
+    },
+    "notes": "E12 ablation on analytics (isolated run for per-dataset cost)."
+  },
+  "records": [
+    {
+      "experiment": "E12_abalation",
+      "model": "gpt-4o-mini-2024-07-18",
+      "seed": 1,
+      "condition": "base",
+      "domain": "analytics",
+      "split_grain": "domain",
+      "split": "all",
+      "n": 120,
+      "accuracy": 34.2,
+      "side_effect_rate": 55.8,
+      "delta_vs_base": null
+    },
+    {
+      "experiment": "E12_abalation",
+      "model": "gpt-4o-mini-2024-07-18",
+      "seed": 1,
+      "condition": "with_tool_dependency_skills",
+      "domain": "analytics",
+      "split_grain": "domain",
+      "split": "all",
+      "n": 120,
+      "accuracy": 38.3,
+      "side_effect_rate": 52.5,
+      "delta_vs_base": 4.2
+    },
+    {
+      "experiment": "E12_abalation",
+      "model": "gpt-4o-mini-2024-07-18",
+      "seed": 1,
+      "condition": "skills_gated",
+      "domain": "analytics",
+      "split_grain": "domain",
+      "split": "all",
+      "n": 120,
+      "accuracy": 41.7,
+      "side_effect_rate": 47.5,
+      "delta_vs_base": 7.5
+    },
+    {
+      "experiment": "E12_abalation",
+      "model": "gpt-4o-mini-2024-07-18",
+      "seed": 1,
+      "condition": "verify",
+      "domain": "analytics",
+      "split_grain": "domain",
+      "split": "all",
+      "n": 120,
+      "accuracy": 35.0,
+      "side_effect_rate": 48.3,
+      "delta_vs_base": 0.8
+    },
+    {
+      "experiment": "E12_abalation",
+      "model": "gpt-4o-mini-2024-07-18",
+      "seed": 1,
+      "condition": "skills_gated_verify_with_tool_dependency_skills",
+      "domain": "analytics",
+      "split_grain": "domain",
+      "split": "all",
+      "n": 120,
+      "accuracy": 45.8,
+      "side_effect_rate": 46.7,
+      "delta_vs_base": 11.7
+    }
+  ],
+  "usage": {
+    "base": {
+      "prompt_tokens": 6667033,
+      "completion_tokens": 92819,
+      "total_tokens": 6759852,
+      "cost_usd": 1.055746,
+      "overhead_prompt_tokens": 0,
+      "overhead_completion_tokens": 0,
+      "overhead_cost_usd": 0.0,
+      "overhead_by_tag": {},
+      "total_cost_incl_overhead": 1.055746,
+      "wall_seconds": 2397.5,
+      "n_scored": 120,
+      "note": "tokens/cost are THIS run's new work only; cost_usd actor-only, total_cost_incl_overhead adds gate+critic"
+    },
+    "with_tool_dependency_skills": {
+      "prompt_tokens": 6860801,
+      "completion_tokens": 83434,
+      "total_tokens": 6944235,
+      "cost_usd": 1.079181,
+      "overhead_prompt_tokens": 0,
+      "overhead_completion_tokens": 0,
+      "overhead_cost_usd": 0.0,
+      "overhead_by_tag": {},
+      "total_cost_incl_overhead": 1.079181,
+      "wall_seconds": 2397.5,
+      "n_scored": 120,
+      "note": "tokens/cost are THIS run's new work only; cost_usd actor-only, total_cost_incl_overhead adds gate+critic"
+    },
+    "skills_gated": {
+      "prompt_tokens": 6733974,
+      "completion_tokens": 78300,
+      "total_tokens": 6812274,
+      "cost_usd": 1.057076,
+      "overhead_prompt_tokens": 49646,
+      "overhead_completion_tokens": 722,
+      "overhead_cost_usd": 0.00788,
+      "overhead_by_tag": {
+        "gate_llm|gpt-4o-mini-2024-07-18": {
+          "prompt_tokens": 49646,
+          "completion_tokens": 722,
+          "calls": 120
+        }
+      },
+      "total_cost_incl_overhead": 1.064956,
+      "wall_seconds": 2397.5,
+      "n_scored": 120,
+      "note": "tokens/cost are THIS run's new work only; cost_usd actor-only, total_cost_incl_overhead adds gate+critic"
+    },
+    "verify": {
+      "prompt_tokens": 11289493,
+      "completion_tokens": 148039,
+      "total_tokens": 11437532,
+      "cost_usd": 1.782247,
+      "overhead_prompt_tokens": 101704,
+      "overhead_completion_tokens": 3417,
+      "overhead_cost_usd": 0.017305,
+      "overhead_by_tag": {
+        "critic|gpt-4o-mini-2024-07-18": {
+          "prompt_tokens": 101704,
+          "completion_tokens": 3417,
+          "calls": 120
+        }
+      },
+      "total_cost_incl_overhead": 1.799552,
+      "wall_seconds": 2397.5,
+      "n_scored": 120,
+      "note": "tokens/cost are THIS run's new work only; cost_usd actor-only, total_cost_incl_overhead adds gate+critic"
+    },
+    "skills_gated_verify_with_tool_dependency_skills": {
+      "prompt_tokens": 11864338,
+      "completion_tokens": 148117,
+      "total_tokens": 12012455,
+      "cost_usd": 1.868521,
+      "overhead_prompt_tokens": 148838,
+      "overhead_completion_tokens": 4381,
+      "overhead_cost_usd": 0.024954,
+      "overhead_by_tag": {
+        "gate_llm|gpt-4o-mini-2024-07-18": {
+          "prompt_tokens": 49646,
+          "completion_tokens": 725,
+          "calls": 120
+        },
+        "critic|gpt-4o-mini-2024-07-18": {
+          "prompt_tokens": 99192,
+          "completion_tokens": 3656,
+          "calls": 120
+        }
+      },
+      "total_cost_incl_overhead": 1.893475,
+      "wall_seconds": 2397.5,
+      "n_scored": 120,
+      "note": "tokens/cost are THIS run's new work only; cost_usd actor-only, total_cost_incl_overhead adds gate+critic"
+    }
+  }
+}

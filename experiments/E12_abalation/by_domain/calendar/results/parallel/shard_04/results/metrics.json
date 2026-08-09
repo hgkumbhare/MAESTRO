@@ -1,0 +1,206 @@
+{
+  "config": {
+    "experiment": "E12_abalation",
+    "status": "run",
+    "model": "gpt-4o-mini-2024-07-18",
+    "conditions": [
+      "base",
+      "with_tool_dependency_skills",
+      "skills_gated",
+      "verify",
+      "skills_gated_verify_with_tool_dependency_skills"
+    ],
+    "agent_engine": "smolagents",
+    "seed": 1,
+    "checkpoint_every": 25,
+    "stagger_seconds": 8,
+    "gating": {
+      "method": "llm"
+    },
+    "tool_set": "improved",
+    "verify": {
+      "max_iters": 2,
+      "critic_model": "gpt-4o-mini-2024-07-18"
+    },
+    "notes": "E12 ablation on calendar (isolated run for per-dataset cost).",
+    "condition_queries": {
+      "base": "/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_domain/calendar/results/parallel/shard_04/_q_base.csv",
+      "with_tool_dependency_skills": "/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_domain/calendar/results/parallel/shard_04/_q_with_tool_dependency_skills.csv",
+      "skills_gated": "/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_domain/calendar/results/parallel/shard_04/_q_skills_gated.csv",
+      "verify": "/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_domain/calendar/results/parallel/shard_04/_q_verify.csv",
+      "skills_gated_verify_with_tool_dependency_skills": "/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_domain/calendar/results/parallel/shard_04/_q_skills_gated_verify_with_tool_dependency_skills.csv"
+    }
+  },
+  "records": [
+    {
+      "experiment": "E12_abalation",
+      "model": "gpt-4o-mini-2024-07-18",
+      "seed": 1,
+      "condition": "base",
+      "domain": "calendar",
+      "split_grain": "domain",
+      "split": "all",
+      "n": 18,
+      "accuracy": 83.3,
+      "side_effect_rate": 16.7,
+      "delta_vs_base": null
+    },
+    {
+      "experiment": "E12_abalation",
+      "model": "gpt-4o-mini-2024-07-18",
+      "seed": 1,
+      "condition": "with_tool_dependency_skills",
+      "domain": "calendar",
+      "split_grain": "domain",
+      "split": "all",
+      "n": 18,
+      "accuracy": 83.3,
+      "side_effect_rate": 16.7,
+      "delta_vs_base": 0.0
+    },
+    {
+      "experiment": "E12_abalation",
+      "model": "gpt-4o-mini-2024-07-18",
+      "seed": 1,
+      "condition": "skills_gated",
+      "domain": "calendar",
+      "split_grain": "domain",
+      "split": "all",
+      "n": 18,
+      "accuracy": 88.9,
+      "side_effect_rate": 11.1,
+      "delta_vs_base": 5.6
+    },
+    {
+      "experiment": "E12_abalation",
+      "model": "gpt-4o-mini-2024-07-18",
+      "seed": 1,
+      "condition": "verify",
+      "domain": "calendar",
+      "split_grain": "domain",
+      "split": "all",
+      "n": 18,
+      "accuracy": 72.2,
+      "side_effect_rate": 22.2,
+      "delta_vs_base": -11.1
+    },
+    {
+      "experiment": "E12_abalation",
+      "model": "gpt-4o-mini-2024-07-18",
+      "seed": 1,
+      "condition": "skills_gated_verify_with_tool_dependency_skills",
+      "domain": "calendar",
+      "split_grain": "domain",
+      "split": "all",
+      "n": 18,
+      "accuracy": 77.8,
+      "side_effect_rate": 16.7,
+      "delta_vs_base": -5.6
+    }
+  ],
+  "usage": {
+    "base": {
+      "prompt_tokens": 691359,
+      "completion_tokens": 6280,
+      "total_tokens": 697639,
+      "cost_usd": 0.107472,
+      "overhead_prompt_tokens": 0,
+      "overhead_completion_tokens": 0,
+      "overhead_cost_usd": 0.0,
+      "overhead_by_tag": {},
+      "total_cost_incl_overhead": 0.107472,
+      "langchain_cost_usd": 0.0,
+      "wall_seconds": 186.7,
+      "sec_per_query": 10.37,
+      "n_queries": 18,
+      "note": "token/cost/latency cover freshly-run chunks only (resumed chunks not recounted); cost_usd is actor-only, total_cost_incl_overhead adds gate+critic."
+    },
+    "with_tool_dependency_skills": {
+      "prompt_tokens": 810130,
+      "completion_tokens": 6180,
+      "total_tokens": 816310,
+      "cost_usd": 0.125227,
+      "overhead_prompt_tokens": 0,
+      "overhead_completion_tokens": 0,
+      "overhead_cost_usd": 0.0,
+      "overhead_by_tag": {},
+      "total_cost_incl_overhead": 0.125227,
+      "langchain_cost_usd": 0.0,
+      "wall_seconds": 120.9,
+      "sec_per_query": 6.72,
+      "n_queries": 18,
+      "note": "token/cost/latency cover freshly-run chunks only (resumed chunks not recounted); cost_usd is actor-only, total_cost_incl_overhead adds gate+critic."
+    },
+    "skills_gated": {
+      "prompt_tokens": 854690,
+      "completion_tokens": 5596,
+      "total_tokens": 860286,
+      "cost_usd": 0.131561,
+      "overhead_prompt_tokens": 7339,
+      "overhead_completion_tokens": 127,
+      "overhead_cost_usd": 0.001177,
+      "overhead_by_tag": {
+        "gate_llm|gpt-4o-mini-2024-07-18": {
+          "prompt_tokens": 7339,
+          "completion_tokens": 127,
+          "calls": 18
+        }
+      },
+      "total_cost_incl_overhead": 0.132738,
+      "langchain_cost_usd": 0.0,
+      "wall_seconds": 125.0,
+      "sec_per_query": 6.94,
+      "n_queries": 18,
+      "note": "token/cost/latency cover freshly-run chunks only (resumed chunks not recounted); cost_usd is actor-only, total_cost_incl_overhead adds gate+critic."
+    },
+    "verify": {
+      "prompt_tokens": 942706,
+      "completion_tokens": 6965,
+      "total_tokens": 949671,
+      "cost_usd": 0.145585,
+      "overhead_prompt_tokens": 11059,
+      "overhead_completion_tokens": 165,
+      "overhead_cost_usd": 0.001758,
+      "overhead_by_tag": {
+        "critic|gpt-4o-mini-2024-07-18": {
+          "prompt_tokens": 11059,
+          "completion_tokens": 165,
+          "calls": 18
+        }
+      },
+      "total_cost_incl_overhead": 0.147343,
+      "langchain_cost_usd": 0.0,
+      "wall_seconds": 185.4,
+      "sec_per_query": 10.3,
+      "n_queries": 18,
+      "note": "token/cost/latency cover freshly-run chunks only (resumed chunks not recounted); cost_usd is actor-only, total_cost_incl_overhead adds gate+critic."
+    },
+    "skills_gated_verify_with_tool_dependency_skills": {
+      "prompt_tokens": 1067181,
+      "completion_tokens": 7350,
+      "total_tokens": 1074531,
+      "cost_usd": 0.164487,
+      "overhead_prompt_tokens": 18460,
+      "overhead_completion_tokens": 429,
+      "overhead_cost_usd": 0.003027,
+      "overhead_by_tag": {
+        "gate_llm|gpt-4o-mini-2024-07-18": {
+          "prompt_tokens": 7339,
+          "completion_tokens": 130,
+          "calls": 18
+        },
+        "critic|gpt-4o-mini-2024-07-18": {
+          "prompt_tokens": 11121,
+          "completion_tokens": 299,
+          "calls": 18
+        }
+      },
+      "total_cost_incl_overhead": 0.167514,
+      "langchain_cost_usd": 0.0,
+      "wall_seconds": 185.2,
+      "sec_per_query": 10.29,
+      "n_queries": 18,
+      "note": "token/cost/latency cover freshly-run chunks only (resumed chunks not recounted); cost_usd is actor-only, total_cost_incl_overhead adds gate+critic."
+    }
+  }
+}

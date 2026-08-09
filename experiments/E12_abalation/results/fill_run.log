@@ -1,0 +1,41 @@
+[E2_abalation] conditions=['base', 'with_integration_test', 'with_tool_dependency_skills', 'skills', 'skills_gated', 'skills_gated_verify', 'skills_gated_verify_with_tool_dependency_skills', 'skills_gated_verify_with_integration_test_and_tool_dependency_skills'] tool_set=improved
+[parallel] store: done {'base': 80, 'with_integration_test': 80, 'with_tool_dependency_skills': 80, 'skills': 80, 'skills_gated': 41, 'skills_gated_verify': 41, 'skills_gated_verify_with_tool_dependency_skills': 41, 'skills_gated_verify_with_integration_test_and_tool_dependency_skills': 41}  |  remaining 156 query-runs across ['base', 'with_integration_test', 'with_tool_dependency_skills', 'skills', 'skills_gated', 'skills_gated_verify', 'skills_gated_verify_with_tool_dependency_skills', 'skills_gated_verify_with_integration_test_and_tool_dependency_skills']
+[parallel] launching 6 shards (max_workers=6, stagger=8s)
+[parallel] started shard_00 (pid 80819)
+[parallel] started shard_01 (pid 80839)
+[parallel] started shard_02 (pid 80852)
+[parallel] started shard_03 (pid 80866)
+[parallel] started shard_04 (pid 80881)
+[parallel] started shard_05 (pid 80892)
+[parallel] finished shard_05  (1/6)  rc=0
+[parallel] finished shard_03  (2/6)  rc=0
+[parallel] finished shard_02  (3/6)  rc=0
+[parallel] finished shard_04  (4/6)  rc=0
+[parallel] finished shard_01  (5/6)  rc=0
+[parallel] finished shard_00  (6/6)  rc=0
+[parallel] shards done in 373s wall
+
+########## E2_abalation — standard results (from store) ##########
+condition     domain                split (grain)            n    acc%   Δbase   side%
+--------------------------------------------------------------------------------------
+base          project_management    all (domain)            80    52.5       -    25.0
+with_integration_testproject_management    all (domain)            80    52.5    +0.0    16.2
+with_tool_dependency_skillsproject_management    all (domain)            80    50.0    -2.5    20.0
+skills        project_management    all (domain)            80    60.0    +7.5    30.0
+skills_gated  project_management    all (domain)            80    67.5   +15.0    27.5
+skills_gated_verifyproject_management    all (domain)            80    63.7   +11.2    32.5
+skills_gated_verify_with_tool_dependency_skillsproject_management    all (domain)            80    63.7   +11.2    35.0
+skills_gated_verify_with_integration_test_and_tool_dependency_skillsproject_management    all (domain)            80    65.0   +12.5    28.7
+
+########## E2_abalation — cost / tokens (this run) ##########
+  base                0 tokens  $0.0000  (scored 80)
+  with_integration_test          0 tokens  $0.0000  (scored 80)
+  with_tool_dependency_skills          0 tokens  $0.0000  (scored 80)
+  skills              0 tokens  $0.0000  (scored 80)
+  skills_gated  2,022,044 tokens  $0.3109  (scored 80)
+  skills_gated_verify  2,149,866 tokens  $0.3302  (scored 80)
+  skills_gated_verify_with_tool_dependency_skills  2,528,416 tokens  $0.3878  (scored 80)
+  skills_gated_verify_with_integration_test_and_tool_dependency_skills  4,764,613 tokens  $0.7230  (scored 80)
+  wall (this run): 373s
+
+Wrote /Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/results/metrics.json

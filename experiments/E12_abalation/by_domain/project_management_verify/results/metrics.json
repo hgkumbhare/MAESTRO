@@ -1,0 +1,65 @@
+{
+  "config": {
+    "experiment": "E12_abalation",
+    "status": "run",
+    "model": "gpt-4o-mini-2024-07-18",
+    "queries_paths": [
+      "data/processed/queries_and_answers/project_management_queries_and_answers.csv"
+    ],
+    "conditions": [
+      "verify"
+    ],
+    "agent_engine": "smolagents",
+    "seed": 1,
+    "checkpoint_every": 25,
+    "parallel": true,
+    "max_workers": 6,
+    "stagger_seconds": 8,
+    "gating": {
+      "method": "llm"
+    },
+    "tool_set": "improved",
+    "verify": {
+      "max_iters": 2,
+      "critic_model": "gpt-4o-mini-2024-07-18"
+    },
+    "notes": "verify arm only (actor-critic, no skills) on PM; isolated from the 8-arm run."
+  },
+  "records": [
+    {
+      "experiment": "E12_abalation",
+      "model": "gpt-4o-mini-2024-07-18",
+      "seed": 1,
+      "condition": "verify",
+      "domain": "project_management",
+      "split_grain": "domain",
+      "split": "all",
+      "n": 80,
+      "accuracy": 57.5,
+      "side_effect_rate": 12.5,
+      "delta_vs_base": null
+    }
+  ],
+  "usage": {
+    "verify": {
+      "prompt_tokens": 5728989,
+      "completion_tokens": 48171,
+      "total_tokens": 5777160,
+      "cost_usd": 0.888251,
+      "overhead_prompt_tokens": 49888,
+      "overhead_completion_tokens": 766,
+      "overhead_cost_usd": 0.007943,
+      "overhead_by_tag": {
+        "critic|gpt-4o-mini-2024-07-18": {
+          "prompt_tokens": 49888,
+          "completion_tokens": 766,
+          "calls": 80
+        }
+      },
+      "total_cost_incl_overhead": 0.896194,
+      "wall_seconds": 260.7,
+      "n_scored": 80,
+      "note": "tokens/cost are THIS run's new work only; cost_usd actor-only, total_cost_incl_overhead adds gate+critic"
+    }
+  }
+}

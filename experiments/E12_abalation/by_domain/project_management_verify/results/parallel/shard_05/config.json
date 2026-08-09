@@ -1,0 +1,24 @@
+{
+  "experiment": "E12_abalation",
+  "status": "run",
+  "model": "gpt-4o-mini-2024-07-18",
+  "conditions": [
+    "verify"
+  ],
+  "agent_engine": "smolagents",
+  "seed": 1,
+  "checkpoint_every": 25,
+  "stagger_seconds": 8,
+  "gating": {
+    "method": "llm"
+  },
+  "tool_set": "improved",
+  "verify": {
+    "max_iters": 2,
+    "critic_model": "gpt-4o-mini-2024-07-18"
+  },
+  "notes": "verify arm only (actor-critic, no skills) on PM; isolated from the 8-arm run.",
+  "condition_queries": {
+    "verify": "/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_domain/project_management_verify/results/parallel/shard_05/_q_verify.csv"
+  }
+}

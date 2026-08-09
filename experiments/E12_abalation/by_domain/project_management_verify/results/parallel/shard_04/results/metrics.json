@@ -1,0 +1,65 @@
+{
+  "config": {
+    "experiment": "E12_abalation",
+    "status": "run",
+    "model": "gpt-4o-mini-2024-07-18",
+    "conditions": [
+      "verify"
+    ],
+    "agent_engine": "smolagents",
+    "seed": 1,
+    "checkpoint_every": 25,
+    "stagger_seconds": 8,
+    "gating": {
+      "method": "llm"
+    },
+    "tool_set": "improved",
+    "verify": {
+      "max_iters": 2,
+      "critic_model": "gpt-4o-mini-2024-07-18"
+    },
+    "notes": "verify arm only (actor-critic, no skills) on PM; isolated from the 8-arm run.",
+    "condition_queries": {
+      "verify": "/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_domain/project_management_verify/results/parallel/shard_04/_q_verify.csv"
+    }
+  },
+  "records": [
+    {
+      "experiment": "E12_abalation",
+      "model": "gpt-4o-mini-2024-07-18",
+      "seed": 1,
+      "condition": "verify",
+      "domain": "project_management",
+      "split_grain": "domain",
+      "split": "all",
+      "n": 13,
+      "accuracy": 76.9,
+      "side_effect_rate": 0.0,
+      "delta_vs_base": null
+    }
+  ],
+  "usage": {
+    "verify": {
+      "prompt_tokens": 1040724,
+      "completion_tokens": 8560,
+      "total_tokens": 1049284,
+      "cost_usd": 0.161245,
+      "overhead_prompt_tokens": 8026,
+      "overhead_completion_tokens": 111,
+      "overhead_cost_usd": 0.00127,
+      "overhead_by_tag": {
+        "critic|gpt-4o-mini-2024-07-18": {
+          "prompt_tokens": 8026,
+          "completion_tokens": 111,
+          "calls": 13
+        }
+      },
+      "total_cost_incl_overhead": 0.162515,
+      "langchain_cost_usd": 0.0,
+      "wall_seconds": 215.1,
+      "sec_per_query": 16.54,
+      "n_queries": 13,
+      "note": "token/cost/latency cover freshly-run chunks only (resumed chunks not recounted); cost_usd is actor-only, total_cost_incl_overhead adds gate+critic."
+    }
+  }
+}

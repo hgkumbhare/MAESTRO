@@ -1,0 +1,126 @@
+query,prediction,full_response,error,tool_set,ground_truth,base_template,chosen_template,domains,source_domain,correct,unwanted_side_effects,coverage,domain
+Create a bar chart of total visits since September 2,"['analytics.total_visits_count.func(time_min=""2023-09-02"", time_max=""2023-11-30"")', 'analytics.create_plot.func(time_min=""2023-09-02"", time_max=""2023-11-30"", value_to_plot=""total_visits"", plot_type=""bar"")']",The bar chart for total visits has been created and saved as 'total_visits_bar.png'.,,improved,"['analytics.create_plot.func(time_min=""2023-09-02"", time_max=""2023-11-29"", value_to_plot=""total_visits"", plot_type=""bar"")']",Can you make a {plot_type} chart of {natural_language_metric} since {natural_language_date}?,Create a {plot_type} chart of {natural_language_metric} since {natural_language_date},['analytics'],analytics,False,True,uncovered,analytics
+Can you make a bar chart of total visits since September 9?,"['analytics.total_visits_count.func(time_min=""2023-09-09"", time_max=""2023-11-30"")', 'analytics.create_plot.func(time_min=""2023-09-09"", time_max=""2023-11-30"", value_to_plot=""total_visits"", plot_type=""bar"")']",plots/2023-09-09_2023-11-30_total_visits_bar.png,,improved,"['analytics.create_plot.func(time_min=""2023-09-09"", time_max=""2023-11-29"", value_to_plot=""total_visits"", plot_type=""bar"")']",Can you make a {plot_type} chart of {natural_language_metric} since {natural_language_date}?,Can you make a {plot_type} chart of {natural_language_metric} since {natural_language_date}?,['analytics'],analytics,False,True,uncovered,analytics
+please plot the distribution of the total visits metric on October 17,"['analytics.total_visits_count.func(time_min=""2023-10-17"", time_max=""2023-10-17"")', 'analytics.create_plot.func(time_min=""2023-10-17"", time_max=""2023-10-17"", value_to_plot=""total_visits"", plot_type=""bar"")']",plots/2023-10-17_2023-10-17_total_visits_bar.png,,improved,"['analytics.create_plot.func(time_min=""2023-10-17"", time_max=""2023-10-17"", value_to_plot=""total_visits"", plot_type=""histogram"")']",Plot the distribution of {natural_language_metric} on {natural_language_date},please plot the distribution of the {natural_language_metric} metric on {natural_language_date},['analytics'],analytics,False,True,uncovered,analytics
+Please plot for me the distribution of engaged users and total visits between November 5 and November 21,"['analytics.engaged_users_count.func(time_min=""2023-11-05"", time_max=""2023-11-21"")', 'analytics.total_visits_count.func(time_min=""2023-11-05"", time_max=""2023-11-21"")']","Date	Engaged Users	Total Visits
+----------------------------------------
+2023-11-05	8	10
+2023-11-06	4	10
+2023-11-07	6	13
+2023-11-08	7	11
+2023-11-09	8	14
+2023-11-10	8	11
+2023-11-11	4	10
+2023-11-12	7	12
+2023-11-13	1	8
+2023-11-14	9	13
+2023-11-15	7	11
+2023-11-16	5	7
+2023-11-17	3	7
+2023-11-18	2	6
+2023-11-19	7	10
+2023-11-20	10	13
+2023-11-21	5	11
+",,improved,"['analytics.create_plot.func(time_min=""2023-11-05"", time_max=""2023-11-21"", value_to_plot=""user_engaged"", plot_type=""histogram"")', 'analytics.create_plot.func(time_min=""2023-11-05"", time_max=""2023-11-21"", value_to_plot=""total_visits"", plot_type=""histogram"")']",Can you plot the distribution of both {natural_language_metric} and {natural_language_metric_2} between {natural_language_date} and {natural_language_date_max}??,Please plot for me the distribution of {natural_language_metric} and {natural_language_metric_2} between {natural_language_date} and {natural_language_date_max},['analytics'],analytics,False,False,uncovered,analytics
+I need a histogram of average session duration and engaged users between November 3 and November 19,"['analytics.get_average_session_duration.func(time_min=""2023-11-03"", time_max=""2023-11-19"")', 'analytics.engaged_users_count.func(time_min=""2023-11-03"", time_max=""2023-11-19"")', 'analytics.create_plot.func(time_min=""2023-11-03"", time_max=""2023-11-19"", value_to_plot=""average_session_duration"", plot_type=""histogram"")', 'analytics.create_plot.func(time_min=""2023-11-03"", time_max=""2023-11-19"", value_to_plot=""engaged_users"", plot_type=""histogram"")', 'analytics.create_plot.func(time_min=""2023-11-03"", time_max=""2023-11-19"", value_to_plot=""session_duration_seconds"", plot_type=""histogram"")', 'analytics.create_plot.func(time_min=""2023-11-03"", time_max=""2023-11-19"", value_to_plot=""user_engaged"", plot_type=""histogram"")', 'analytics.create_plot.func(time_min=""2023-11-03"", time_max=""2023-11-19"", value_to_plot=""session_duration_seconds"", plot_type=""histogram"")']","{'engaged_users_histogram': 'plots/2023-11-03_2023-11-19_user_engaged_histogram.png', 'average_session_duration_histogram': 'plots/2023-11-03_2023-11-19_session_duration_seconds_histogram.png'}",,improved,"['analytics.create_plot.func(time_min=""2023-11-03"", time_max=""2023-11-19"", value_to_plot=""session_duration_seconds"", plot_type=""histogram"")', 'analytics.create_plot.func(time_min=""2023-11-03"", time_max=""2023-11-19"", value_to_plot=""user_engaged"", plot_type=""histogram"")']",Can you plot the distribution of both {natural_language_metric} and {natural_language_metric_2} between {natural_language_date} and {natural_language_date_max}??,I need a histogram of {natural_language_metric} and {natural_language_metric_2} between {natural_language_date} and {natural_language_date_max},['analytics'],analytics,False,True,uncovered,analytics
+"was total visits more than 3 at any time since October 28? If so, please plot it as a line chart","['analytics.total_visits_count.func(time_min=""2023-10-28"", time_max=""2023-11-30"")', 'analytics.create_plot.func(time_min=""2023-10-28"", time_max=""2023-11-30"", value_to_plot=""total_visits"", plot_type=""line"")']",The line chart for total visits from October 28 to November 30 has been created and saved as '2023-10-28_2023-11-30_total_visits_line.png'.,,improved,"['analytics.create_plot.func(time_min=""2023-10-28"", time_max=""2023-11-29"", value_to_plot=""total_visits"", plot_type=""line"")']","If {natural_language_metric} was {more_or_less} than {threshold} at any time since {natural_language_date}, make a line plot of it since then","was {natural_language_metric} {more_or_less} than {threshold} at any time since {natural_language_date}? If so, please plot it as a line chart",['analytics'],analytics,False,True,uncovered,analytics
+Can you make a line chart of engaged users since October 6 if it was more than 1 since at any time October 6?,"['analytics.engaged_users_count.func(time_min=""2023-10-06"", time_max=""2023-11-30"")', 'analytics.create_plot.func(time_min=""2023-10-06"", time_max=""2023-11-30"", value_to_plot=""user_engaged"", plot_type=""line"")']",plots/2023-10-06_2023-11-30_user_engaged_line.png,,improved,"['analytics.create_plot.func(time_min=""2023-10-06"", time_max=""2023-11-29"", value_to_plot=""user_engaged"", plot_type=""line"")']","If {natural_language_metric} was {more_or_less} than {threshold} at any time since {natural_language_date}, make a line plot of it since then",Can you make a line chart of {natural_language_metric} since {natural_language_date} if it was {more_or_less} than {threshold} since at any time {natural_language_date}?,['analytics'],analytics,False,True,uncovered,analytics
+I need bar charts of average session duration and total visits since 2023-11-03,"['analytics.get_average_session_duration.func(time_min=""2023-11-03"")', 'analytics.total_visits_count.func(time_min=""2023-11-03"")', 'analytics.create_plot.func(time_min=""2023-11-03"", time_max=""2023-11-29"", value_to_plot=""average_session_duration"", plot_type=""bar"")', 'analytics.create_plot.func(time_min=""2023-11-03"", time_max=""2023-11-29"", value_to_plot=""total_visits"", plot_type=""bar"")', 'analytics.create_plot.func(time_min=""2023-11-03"", time_max=""2023-11-29"", value_to_plot=""average_session_duration"", plot_type=""bar"")', 'analytics.create_plot.func(time_min=""2023-11-03"", time_max=""2023-11-29"", value_to_plot=""session_duration_seconds"", plot_type=""bar"")']","{'total_visits_chart': 'plots/2023-11-03_2023-11-29_total_visits_bar.png', 'average_session_duration_chart': 'plots/2023-11-03_2023-11-29_session_duration_seconds_bar.png'}",,improved,"['analytics.create_plot.func(time_min=""2023-11-03"", time_max=""2023-11-29"", value_to_plot=""session_duration_seconds"", plot_type=""bar"")', 'analytics.create_plot.func(time_min=""2023-11-03"", time_max=""2023-11-29"", value_to_plot=""total_visits"", plot_type=""bar"")']",Make bar charts showing {natural_language_metric} and {natural_language_metric_2} since {date_min},I need bar charts of {natural_language_metric} and {natural_language_metric_2} since {date_min},['analytics'],analytics,False,True,uncovered,analytics
+"Was total visits more than 21 at any time in the last 1 weeks? If so, please plot it as a line chart","['analytics.total_visits_count.func(time_min=""2023-11-23"", time_max=""2023-11-30"")']",Total visits did not exceed 21 at any time in the last week.,,improved,[],"If {natural_language_metric} was {more_or_less} than {threshold} any time in the last {past_n_weeks} weeks, make a line plot of it since then","Was {natural_language_metric} {more_or_less} than {threshold} at any time in the last {past_n_weeks} weeks? If so, please plot it as a line chart",['analytics'],analytics,True,False,uncovered,analytics
+"Was engaged users more than 11 at any time in the last 3 weeks? If so, please plot it as a line chart","['analytics.engaged_users_count.func(time_min=""2023-11-09"", time_max=""2023-11-30"")']",Engaged users were not more than 11 at any time in the last 3 weeks.,,improved,[],"If {natural_language_metric} was {more_or_less} than {threshold} any time in the last {past_n_weeks} weeks, make a line plot of it since then","Was {natural_language_metric} {more_or_less} than {threshold} at any time in the last {past_n_weeks} weeks? If so, please plot it as a line chart",['analytics'],analytics,True,False,uncovered,analytics
+"Is engaged users more than 5% higher than September 26? If so, please plot it as a line chart","['analytics.engaged_users_count.func(time_min=""2023-09-26"", time_max=""2023-09-26"")', 'analytics.engaged_users_count.func(time_min=""2023-11-30"", time_max=""2023-11-30"")']",Today's engaged users are not more than 5% higher than those on September 26.,,improved,[],"If {natural_language_metric} is more than {natural_language_growth_threshold} {higher_or_lower} than {natural_language_date}, make a line plot of it since then","Is {natural_language_metric} more than {natural_language_growth_threshold} {higher_or_lower} than {natural_language_date}? If so, please plot it as a line chart",['analytics'],analytics,True,False,uncovered,analytics
+Can you make a line chart of engaged users since October 21 if it was more than 10% higher than October 21?,"['analytics.engaged_users_count.func(time_min=""2023-10-21"", time_max=""2023-11-30"")']",No line chart can be created as there are no days with engaged users exceeding the threshold of 12.,,improved,[],"If {natural_language_metric} is more than {natural_language_growth_threshold} {higher_or_lower} than {natural_language_date}, make a line plot of it since then",Can you make a line chart of {natural_language_metric} since {natural_language_date} if it was more than {natural_language_growth_threshold} {higher_or_lower} than {natural_language_date}?,['analytics'],analytics,True,False,uncovered,analytics
+"Is engaged users more than 2% lower than it was on Sunday? If so, please plot it as a line chart since then","['analytics.engaged_users_count.func(time_min=""2023-11-26"", time_max=""2023-11-26"")', 'analytics.engaged_users_count.func(time_min=""2023-11-30"", time_max=""2023-11-30"")', 'analytics.engaged_users_count.func(time_min=""2023-11-26"", time_max=""2023-11-30"")', 'analytics.create_plot.func(time_min=""2023-11-26"", time_max=""2023-11-29"", value_to_plot=""engaged_users"", plot_type=""line"")', 'analytics.create_plot.func(time_min=""2023-11-26"", time_max=""2023-11-29"", value_to_plot=""user_engaged"", plot_type=""line"")']",Engaged users are more than 2% lower than they were on Sunday. The plot has been created: plots/2023-11-26_2023-11-29_user_engaged_line.png,,improved,[],"If {natural_language_metric} is more than {natural_language_growth_threshold} {higher_or_lower} than it was on {day_of_week}, make a line plot of it since then","Is {natural_language_metric} more than {natural_language_growth_threshold} {higher_or_lower} than it was on {day_of_week}? If so, please plot it as a line chart since then",['analytics'],analytics,False,True,uncovered,analytics
+"If average session duration on monday was more than 2% lower than it was the previous monday, make a line plot of it over that period.","['analytics.get_average_session_duration.func(time_min=""2023-11-20"", time_max=""2023-11-20"")', 'analytics.get_average_session_duration.func(time_min=""2023-11-27"", time_max=""2023-11-27"")', 'analytics.create_plot.func(time_min=""2023-11-20"", time_max=""2023-11-27"", value_to_plot=""session_duration_seconds"", plot_type=""line"")']",The line plot of average session duration from 2023-11-20 to 2023-11-27 has been created successfully and saved as 'plots/2023-11-20_2023-11-27_session_duration_seconds_line.png'.,,improved,"['analytics.create_plot.func(time_min=""2023-11-20"", time_max=""2023-11-27"", value_to_plot=""session_duration_seconds"", plot_type=""line"")']","If {natural_language_metric} on {day_of_week} was more than {natural_language_growth_threshold} {higher_or_lower} than it was the previous {day_of_week}, make a line plot of it over that period.","If {natural_language_metric} on {day_of_week} was more than {natural_language_growth_threshold} {higher_or_lower} than it was the previous {day_of_week}, make a line plot of it over that period.",['analytics'],analytics,True,False,uncovered,analytics
+"Was engaged users on monday more than 10% higher than it was the previous monday? If so, please plot it as a line chart","['analytics.engaged_users_count.func(time_min=""2023-11-27"")', 'analytics.engaged_users_count.func(time_min=""2023-11-20"")']",The engaged users on 2023-11-27 were not more than 10% higher than on 2023-11-20.,,improved,[],"If {natural_language_metric} on {day_of_week} was more than {natural_language_growth_threshold} {higher_or_lower} than it was the previous {day_of_week}, make a line plot of it over that period.","Was {natural_language_metric} on {day_of_week} more than {natural_language_growth_threshold} {higher_or_lower} than it was the previous {day_of_week}? If so, please plot it as a line chart",['analytics'],analytics,True,False,uncovered,analytics
+"Can you check the percent growth of average session duration since Sunday? If it grew by more than total visits, plot both lines since then","['analytics.get_average_session_duration.func(time_min=""2023-11-26"", time_max=""2023-11-30"")', 'analytics.total_visits_count.func(time_min=""2023-11-26"", time_max=""2023-11-30"")']","{'percent_growth': -18.0, 'total_visits_sum': 41, 'plots_created': False}",,improved,[],"Can you check the percent growth of {natural_language_metric} since {day_of_week}? If it grew by more than {natural_language_metric_2}, plot both lines since then","Can you check the percent growth of {natural_language_metric} since {day_of_week}? If it grew by more than {natural_language_metric_2}, plot both lines since then",['analytics'],analytics,True,False,uncovered,analytics
+"Can you check the percent growth of average session duration since Wednesday? If it grew by more than total visits, plot both lines since then","['analytics.get_average_session_duration.func(time_min=""2023-11-30"", time_max=""2023-11-30"")', 'analytics.get_average_session_duration.func(time_min=""2023-11-29"", time_max=""2023-11-29"")', 'analytics.total_visits_count.func(time_min=""2023-11-30"", time_max=""2023-11-30"")', 'analytics.total_visits_count.func(time_min=""2023-11-29"", time_max=""2023-11-29"")']",No data available for today to calculate growth or plot.,,improved,[],"Can you check the percent growth of {natural_language_metric} since {day_of_week}? If it grew by more than {natural_language_metric_2}, plot both lines since then","Can you check the percent growth of {natural_language_metric} since {day_of_week}? If it grew by more than {natural_language_metric_2}, plot both lines since then",['analytics'],analytics,True,False,uncovered,analytics
+Can you make a line plot of the most popular traffic source since October 15?,"['analytics.traffic_source_count.func(time_min=""2023-10-15"", time_max=""2023-11-30"", traffic_source=""direct"")', 'analytics.traffic_source_count.func(time_min=""2023-10-15"", time_max=""2023-11-30"", traffic_source=""referral"")', 'analytics.traffic_source_count.func(time_min=""2023-10-15"", time_max=""2023-11-30"", traffic_source=""search engine"")', 'analytics.traffic_source_count.func(time_min=""2023-10-15"", time_max=""2023-11-30"", traffic_source=""social media"")']","Most Popular Traffic Source: Direct
+Data:
+2023-10-15: 4
+2023-10-16: 5
+2023-10-17: 5
+2023-10-18: 7
+2023-10-19: 3
+2023-10-20: 3
+2023-10-21: 6
+2023-10-22: 10
+2023-10-23: 3
+2023-10-24: 7
+2023-10-25: 0
+2023-10-26: 6
+2023-10-27: 5
+2023-10-28: 10
+2023-10-29: 3
+2023-10-30: 9
+2023-10-31: 5
+2023-11-01: 13
+2023-11-02: 5
+2023-11-03: 6
+2023-11-04: 5
+2023-11-05: 5
+2023-11-06: 6
+2023-11-07: 5
+2023-11-08: 6
+2023-11-09: 9
+2023-11-10: 8
+2023-11-11: 5
+2023-11-12: 8
+2023-11-13: 6
+2023-11-14: 5
+2023-11-15: 9
+2023-11-16: 3
+2023-11-17: 4
+2023-11-18: 3
+2023-11-19: 5
+2023-11-20: 8
+2023-11-21: 8
+2023-11-22: 4
+2023-11-23: 5
+2023-11-24: 3
+2023-11-25: 9
+2023-11-26: 4
+2023-11-27: 5
+2023-11-28: 12
+2023-11-29: 5",,improved,"['analytics.create_plot.func(time_min=""2023-10-15"", time_max=""2023-11-29"", value_to_plot=""visits_direct"", plot_type=""line"")']",Can you make a line plot of the {most_or_least} popular traffic source since {natural_language_date}?,Can you make a line plot of the {most_or_least} popular traffic source since {natural_language_date}?,['analytics'],analytics,False,False,uncovered,analytics
+Make bar charts of social media and search engine over the last 6 weeks if we got more traffic from social media than search engine,"['analytics.traffic_source_count.func(time_min=""2023-10-19"", time_max=""2023-11-30"", traffic_source=""social media"")', 'analytics.traffic_source_count.func(time_min=""2023-10-19"", time_max=""2023-11-30"", traffic_source=""search engine"")', 'analytics.create_plot.func(time_min=""2023-10-19"", time_max=""2023-11-30"", value_to_plot=""visits_social_media"", plot_type=""bar"")', 'analytics.create_plot.func(time_min=""2023-10-19"", time_max=""2023-11-30"", value_to_plot=""visits_search_engine"", plot_type=""bar"")']","{'social_media_plot': 'plots/2023-10-19_2023-11-30_visits_social_media_bar.png', 'search_engine_plot': 'plots/2023-10-19_2023-11-30_visits_search_engine_bar.png'}",,improved,"['analytics.create_plot.func(time_min=""2023-10-19"", time_max=""2023-11-29"", value_to_plot=""visits_social_media"", plot_type=""bar"")', 'analytics.create_plot.func(time_min=""2023-10-19"", time_max=""2023-11-29"", value_to_plot=""visits_search_engine"", plot_type=""bar"")']","If we got more traffic from {traffic_source_1} than {traffic_source_2} during the last {n_weeks} weeks, make bar charts of both over that period",Make bar charts of {traffic_source_1} and {traffic_source_2} over the last {n_weeks} weeks if we got more traffic from {traffic_source_1} than {traffic_source_2},['analytics'],analytics,False,True,uncovered,analytics
+"did we get more traffic from social media than search engine during the last 5 weeks? If so, make bar charts of both over that period","['analytics.traffic_source_count.func(time_min=""2023-10-26"", time_max=""2023-11-30"", traffic_source=""social media"")', 'analytics.traffic_source_count.func(time_min=""2023-10-26"", time_max=""2023-11-30"", traffic_source=""search engine"")']","Traffic Summary Over the Last 5 Weeks:
+
+Date		Social Media Visits	Search Engine Visits
+--------------------------------------------------
+2023-10-26	2			2
+2023-10-27	4			1
+2023-10-28	4			2
+2023-10-29	7			3
+2023-10-30	1			1
+2023-10-31	2			2
+2023-11-01	2			0
+2023-11-02	5			2
+2023-11-03	3			2
+2023-11-04	2			1
+2023-11-05	4			0
+2023-11-06	2			1
+2023-11-07	5			1
+2023-11-08	3			1
+2023-11-09	1			2
+2023-11-10	2			1
+2023-11-11	3			0
+2023-11-12	2			1
+2023-11-13	1			0
+2023-11-14	3			2
+2023-11-15	1			1
+2023-11-16	1			1
+2023-11-17	1			1
+2023-11-18	2			0
+2023-11-19	1			2
+2023-11-20	2			1
+2023-11-21	0			2
+2023-11-22	3			3
+2023-11-23	0			1
+2023-11-24	4			1
+2023-11-25	4			0
+2023-11-26	0			1
+2023-11-27	1			0
+2023-11-28	5			2
+2023-11-29	4			1
+",,improved,"['analytics.create_plot.func(time_min=""2023-10-26"", time_max=""2023-11-29"", value_to_plot=""visits_social_media"", plot_type=""bar"")', 'analytics.create_plot.func(time_min=""2023-10-26"", time_max=""2023-11-29"", value_to_plot=""visits_search_engine"", plot_type=""bar"")']","If we got more traffic from {traffic_source_1} than {traffic_source_2} during the last {n_weeks} weeks, make bar charts of both over that period","did we get more traffic from {traffic_source_1} than {traffic_source_2} during the last {n_weeks} weeks? If so, make bar charts of both over that period",['analytics'],analytics,False,False,uncovered,analytics

@@ -1,0 +1,27 @@
+[E12] verify-only on project_management -> /Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_domain/project_management_verify
+[parallel] store: done {'verify': 0}  |  remaining 80 query-runs across ['verify']
+[parallel] launching 6 shards (max_workers=6, stagger=8s)
+[parallel] started shard_00 (pid 79958)
+[parallel] started shard_01 (pid 79967)
+[parallel] started shard_02 (pid 79980)
+[parallel] started shard_03 (pid 79994)
+[parallel] started shard_04 (pid 80007)
+[parallel] started shard_05 (pid 80017)
+[parallel] finished shard_03  (1/6)  rc=0
+[parallel] finished shard_05  (2/6)  rc=0
+[parallel] finished shard_02  (3/6)  rc=0
+[parallel] finished shard_00  (4/6)  rc=0
+[parallel] finished shard_01  (5/6)  rc=0
+[parallel] finished shard_04  (6/6)  rc=0
+[parallel] shards done in 261s wall
+
+########## E12_abalation — standard results (from store) ##########
+condition     domain                split (grain)            n    acc%   Δbase   side%
+--------------------------------------------------------------------------------------
+verify        project_management    all (domain)            80    57.5       -    12.5
+
+########## E12_abalation — cost / tokens (this run) ##########
+  verify      5,777,160 tokens  $0.8883  (scored 80)
+  wall (this run): 261s
+
+Wrote /Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_domain/project_management_verify/results/metrics.json

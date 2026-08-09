@@ -1,0 +1,42 @@
+\section{Conclusion}
+
+This study investigated how to improve the reliability of LLM \emph{agent} tool calling
+through lightweight, model-agnostic interventions rather than model retraining. We introduced three
+mechanisms: tool-dependency skills, gated skills, and
+actor-critic verification and evaluated them through a controlled ablation across WorkBench and API-Bank benchmarks
+ and on three models. On WorkBench, averaged over the six domains, the integrated approach raised
+GPT-4o-mini accuracy from 55.1\% to 64.0\% (a 16.2\% relative improvement) while reducing
+harmful side effects. Crucially, every mechanism operates purely at the prompt and orchestration
+level, making it a generic layer that can be attached to any tool-calling agent.
+
+The approach is also inexpensive. Because the mechanisms add only a small amount of context and,
+at most, a single auxiliary classifier or critic call per query, the total cost remained on the
+order of one to two cents per task on GPT-4o-mini and a fraction of a cent on the open
+7--8B models, a negligible overhead relative to the reliability gains, and orders of magnitude
+cheaper than retraining model. This favorable cost profile, combined with
+the training-free design, makes the method practical to deploy in real settings.
+
+TODO: update numbers. Among the individual mechanisms, gated skills proved the most effective single intervention,
+raising accuracy on every non-saturated domain for example, from 65.6\% to 84.4\% on email
+and from 52.5\% to 67.5\% on project management with GPT-4o-mini by injecting only the
+guidance relevant to each query rather than a fixed instruction set. Actor-critic verification
+contributed primarily to safety, roughly halving the unwanted side-effect rate (e.g., 25.0\% to
+12.5\% on project management) while adding modest accuracy, whereas tool-dependency skills helped
+selectively, chiefly on tasks with genuine producer-consumer chains. Combining all three
+mechanisms was not strictly additive: the full configuration excelled only in the hardest,
+mixed-domain settings (e.g., $+11.6$ on analytics, $+4.3$ on multi-domain) and elsewhere trailed
+gated skills alone. Improvements scaled with available headroom, vanishing on already-saturated
+domains such as calendar.
+
+Several limitations remain. Side-effect errors persist and. Gains varied
+substantially across domains and model scales, suggesting that model and domain-specific tuning
+may be required for maximal reliability. Future work should explore reinforcement learning and
+process reward models targeted specifically at minimizing side effects while preserving
+tool-calling reliability, dynamic error-recovery mechanisms that detect and reverse unintended
+actions during execution, scalability to larger tool repertoires, and the security and
+data-integrity risks that accompany increasingly autonomous tool use. 
+
+In summary, this work shows that a generic, training-free, and inexpensive layer of tool-use interventions,
+ a significant step toward developing more reliable and 
+capable LLM agents for real-world applications by narrowing the gap between the 
+theoretical potential of tool-augmented LLMs and their practical ability to execute complex tasks.

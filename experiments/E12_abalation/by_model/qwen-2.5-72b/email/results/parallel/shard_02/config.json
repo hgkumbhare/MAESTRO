@@ -1,0 +1,24 @@
+{
+  "experiment": "E12_qwen72b_base_all",
+  "status": "run",
+  "model": "qwen-2.5-72b",
+  "conditions": [
+    "skills_gated_verify_with_tool_dependency_skills"
+  ],
+  "agent_engine": "smolagents",
+  "seed": 42,
+  "checkpoint_every": 25,
+  "stagger_seconds": 8,
+  "gating": {
+    "method": "llm"
+  },
+  "tool_set": "improved",
+  "verify": {
+    "max_iters": 2,
+    "critic_model": "qwen-2.5-72b"
+  },
+  "notes": "E12 Qwen-2.5-72B base vs All on email; all LLM components via OpenRouter (price-sorted).",
+  "condition_queries": {
+    "skills_gated_verify_with_tool_dependency_skills": "/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_model/qwen-2.5-72b/email/results/parallel/shard_02/_q_skills_gated_verify_with_tool_dependency_skills.csv"
+  }
+}

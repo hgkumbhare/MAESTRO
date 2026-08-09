@@ -1,0 +1,210 @@
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+
+======================================================================
+[E12 Qwen-2.5-72B] customer_relationship_manager
+======================================================================
+[parallel] store: done {'base': 80, 'skills_gated_verify_with_tool_dependency_skills': 60}  |  remaining 20 query-runs across ['base', 'skills_gated_verify_with_tool_dependency_skills']
+[parallel] launching 4 shards (max_workers=4, stagger=8s)
+[parallel] started shard_00 (pid 62869)
+[parallel] started shard_01 (pid 62885)
+[parallel] started shard_02 (pid 62894)
+[parallel] started shard_03 (pid 62926)
+[parallel] finished shard_00  (1/4)  rc=0
+[parallel] finished shard_03  (2/4)  rc=0
+[parallel] finished shard_02  (3/4)  rc=0
+[parallel] finished shard_01  (4/4)  rc=0
+[parallel] shards done in 118s wall
+
+########## E12_qwen72b_base_all — standard results (from store) ##########
+condition     domain                split (grain)            n    acc%   Δbase   side%
+--------------------------------------------------------------------------------------
+base          customer_relationship_managerall (domain)            80    61.3       -    17.5
+skills_gated_verify_with_tool_dependency_skillscustomer_relationship_managerall (domain)            80    58.8    -2.5    21.2
+
+########## E12_qwen72b_base_all — cost / tokens (this run) ##########
+  base                0 tokens  $0.0000  (scored 80)
+  skills_gated_verify_with_tool_dependency_skills  1,223,064 tokens  $0.1486  (scored 80)
+  wall (this run): 118s
+
+Wrote /Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_model/qwen-2.5-72b/customer_relationship_manager/results/metrics.json
+
+======================================================================
+[E12 Qwen-2.5-72B] email
+======================================================================
+[parallel] store: done {'base': 90, 'skills_gated_verify_with_tool_dependency_skills': 45}  |  remaining 45 query-runs across ['base', 'skills_gated_verify_with_tool_dependency_skills']
+[parallel] launching 4 shards (max_workers=4, stagger=8s)
+[parallel] started shard_00 (pid 63044)
+[parallel] started shard_01 (pid 63058)
+[parallel] started shard_02 (pid 63067)
+[parallel] started shard_03 (pid 63081)
+[parallel] finished shard_03  (1/4)  rc=1
+[parallel] finished shard_02  (2/4)  rc=1
+[parallel] finished shard_00  (3/4)  rc=1
+[parallel] finished shard_01  (4/4)  rc=0
+[parallel] shards done in 166s wall
+
+########## E12_qwen72b_base_all — standard results (from store) ##########
+condition     domain                split (grain)            n    acc%   Δbase   side%
+--------------------------------------------------------------------------------------
+base          email                 all (domain)            90    27.8       -    30.0
+skills_gated_verify_with_tool_dependency_skillsemail                 all (domain)            56    66.1   +38.3     8.9
+
+########## E12_qwen72b_base_all — cost / tokens (this run) ##########
+  base                0 tokens  $0.0000  (scored 90)
+  skills_gated_verify_with_tool_dependency_skills    509,132 tokens  $0.0619  (scored 56)
+  wall (this run): 166s
+
+Wrote /Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_model/qwen-2.5-72b/email/results/metrics.json
+
+======================================================================
+[E12 Qwen-2.5-72B] multi_domain
+======================================================================
+[parallel] store: done {'base': 210, 'skills_gated_verify_with_tool_dependency_skills': 25}  |  remaining 185 query-runs across ['base', 'skills_gated_verify_with_tool_dependency_skills']
+[parallel] launching 4 shards (max_workers=4, stagger=8s)
+[parallel] started shard_00 (pid 63211)
+[parallel] started shard_01 (pid 63226)
+[parallel] started shard_02 (pid 63236)
+[parallel] started shard_03 (pid 63253)
+[parallel] finished shard_02  (1/4)  rc=1
+[parallel] finished shard_03  (2/4)  rc=1
+[parallel] finished shard_01  (3/4)  rc=1
+[parallel] finished shard_00  (4/4)  rc=1
+[parallel] shards done in 110s wall
+
+########## E12_qwen72b_base_all — standard results (from store) ##########
+condition     domain                split (grain)            n    acc%   Δbase   side%
+--------------------------------------------------------------------------------------
+base          multi_domain          all (domain)           210    29.0       -    46.7
+skills_gated_verify_with_tool_dependency_skillsmulti_domain          all (domain)            25    40.0   +11.0    40.0
+
+########## E12_qwen72b_base_all — cost / tokens (this run) ##########
+  base                0 tokens  $0.0000  (scored 210)
+  skills_gated_verify_with_tool_dependency_skills          0 tokens  $0.0000  (scored 25)
+  wall (this run): 110s
+
+Wrote /Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_model/qwen-2.5-72b/multi_domain/results/metrics.json

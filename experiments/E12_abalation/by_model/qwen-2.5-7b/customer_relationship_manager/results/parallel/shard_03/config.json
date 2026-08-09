@@ -1,0 +1,26 @@
+{
+  "experiment": "E12_qwen7b_base_all",
+  "status": "run",
+  "model": "qwen-2.5-7b",
+  "conditions": [
+    "base",
+    "skills_gated_verify_with_tool_dependency_skills"
+  ],
+  "agent_engine": "smolagents",
+  "seed": 42,
+  "checkpoint_every": 25,
+  "stagger_seconds": 8,
+  "gating": {
+    "method": "llm"
+  },
+  "tool_set": "improved",
+  "verify": {
+    "max_iters": 2,
+    "critic_model": "qwen-2.5-7b"
+  },
+  "notes": "E12 Qwen 2.5 7B base vs All on customer_relationship_manager; actor+gate+critic all use qwen-2.5-7b via OpenRouter.",
+  "condition_queries": {
+    "base": "/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_model/qwen-2.5-7b/customer_relationship_manager/results/parallel/shard_03/_q_base.csv",
+    "skills_gated_verify_with_tool_dependency_skills": "/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_model/qwen-2.5-7b/customer_relationship_manager/results/parallel/shard_03/_q_skills_gated_verify_with_tool_dependency_skills.csv"
+  }
+}

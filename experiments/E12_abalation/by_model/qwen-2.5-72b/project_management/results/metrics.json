@@ -1,0 +1,98 @@
+{
+  "config": {
+    "experiment": "E12_qwen72b_base_all",
+    "status": "run",
+    "model": "qwen-2.5-72b",
+    "queries_paths": [
+      "data/processed/queries_and_answers/project_management_queries_and_answers.csv"
+    ],
+    "conditions": [
+      "base",
+      "skills_gated_verify_with_tool_dependency_skills"
+    ],
+    "agent_engine": "smolagents",
+    "seed": 42,
+    "checkpoint_every": 25,
+    "parallel": true,
+    "max_workers": 4,
+    "stagger_seconds": 8,
+    "gating": {
+      "method": "llm"
+    },
+    "tool_set": "improved",
+    "verify": {
+      "max_iters": 2,
+      "critic_model": "qwen-2.5-72b"
+    },
+    "notes": "E12 Qwen-2.5-72B base vs All on project_management; all LLM components via OpenRouter (price-sorted)."
+  },
+  "records": [
+    {
+      "experiment": "E12_qwen72b_base_all",
+      "model": "qwen-2.5-72b",
+      "seed": 42,
+      "condition": "base",
+      "domain": "project_management",
+      "split_grain": "domain",
+      "split": "all",
+      "n": 80,
+      "accuracy": 48.8,
+      "side_effect_rate": 25.0,
+      "delta_vs_base": null
+    },
+    {
+      "experiment": "E12_qwen72b_base_all",
+      "model": "qwen-2.5-72b",
+      "seed": 42,
+      "condition": "skills_gated_verify_with_tool_dependency_skills",
+      "domain": "project_management",
+      "split_grain": "domain",
+      "split": "all",
+      "n": 80,
+      "accuracy": 67.5,
+      "side_effect_rate": 16.2,
+      "delta_vs_base": 18.8
+    }
+  ],
+  "usage": {
+    "base": {
+      "prompt_tokens": 292811,
+      "completion_tokens": 2565,
+      "total_tokens": 295376,
+      "cost_usd": 0.036138,
+      "overhead_prompt_tokens": 0,
+      "overhead_completion_tokens": 0,
+      "overhead_cost_usd": 0.0,
+      "overhead_by_tag": {},
+      "total_cost_incl_overhead": 0.036138,
+      "wall_seconds": 515.0,
+      "n_scored": 80,
+      "note": "tokens/cost are THIS run's new work only; cost_usd actor-only, total_cost_incl_overhead adds gate+critic"
+    },
+    "skills_gated_verify_with_tool_dependency_skills": {
+      "prompt_tokens": 4719250,
+      "completion_tokens": 29361,
+      "total_tokens": 4748611,
+      "cost_usd": 0.577761,
+      "overhead_prompt_tokens": 81602,
+      "overhead_completion_tokens": 1051,
+      "overhead_cost_usd": 0.010201,
+      "overhead_by_tag": {
+        "gate_llm|qwen-2.5-72b": {
+          "prompt_tokens": 33186,
+          "completion_tokens": 974,
+          "calls": 80
+        },
+        "critic|qwen-2.5-72b": {
+          "prompt_tokens": 48416,
+          "completion_tokens": 77,
+          "calls": 77
+        }
+      },
+      "total_cost_incl_overhead": 0.587962,
+      "wall_seconds": 515.0,
+      "n_scored": 80,
+      "note": "tokens/cost are THIS run's new work only; cost_usd actor-only, total_cost_incl_overhead adds gate+critic"
+    }
+  }
+}

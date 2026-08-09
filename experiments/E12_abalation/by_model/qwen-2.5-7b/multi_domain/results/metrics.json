@@ -1,0 +1,98 @@
+{
+  "config": {
+    "experiment": "E12_qwen7b_base_all",
+    "status": "run",
+    "model": "qwen-2.5-7b",
+    "queries_paths": [
+      "data/processed/queries_and_answers/multi_domain_queries_and_answers.csv"
+    ],
+    "conditions": [
+      "base",
+      "skills_gated_verify_with_tool_dependency_skills"
+    ],
+    "agent_engine": "smolagents",
+    "seed": 42,
+    "checkpoint_every": 25,
+    "parallel": true,
+    "max_workers": 4,
+    "stagger_seconds": 8,
+    "gating": {
+      "method": "llm"
+    },
+    "tool_set": "improved",
+    "verify": {
+      "max_iters": 2,
+      "critic_model": "qwen-2.5-7b"
+    },
+    "notes": "E12 Qwen 2.5 7B base vs All on multi_domain; actor+gate+critic all use qwen-2.5-7b via OpenRouter."
+  },
+  "records": [
+    {
+      "experiment": "E12_qwen7b_base_all",
+      "model": "qwen-2.5-7b",
+      "seed": 42,
+      "condition": "base",
+      "domain": "multi_domain",
+      "split_grain": "domain",
+      "split": "all",
+      "n": 210,
+      "accuracy": 19.5,
+      "side_effect_rate": 51.4,
+      "delta_vs_base": null
+    },
+    {
+      "experiment": "E12_qwen7b_base_all",
+      "model": "qwen-2.5-7b",
+      "seed": 42,
+      "condition": "skills_gated_verify_with_tool_dependency_skills",
+      "domain": "multi_domain",
+      "split_grain": "domain",
+      "split": "all",
+      "n": 210,
+      "accuracy": 21.4,
+      "side_effect_rate": 47.1,
+      "delta_vs_base": 1.9
+    }
+  ],
+  "usage": {
+    "base": {
+      "prompt_tokens": 26232856,
+      "completion_tokens": 391586,
+      "total_tokens": 26624442,
+      "cost_usd": 1.088473,
+      "overhead_prompt_tokens": 0,
+      "overhead_completion_tokens": 0,
+      "overhead_cost_usd": 0.0,
+      "overhead_by_tag": {},
+      "total_cost_incl_overhead": 1.088473,
+      "wall_seconds": 3822.0,
+      "n_scored": 210,
+      "note": "tokens/cost are THIS run's new work only; cost_usd actor-only, total_cost_incl_overhead adds gate+critic"
+    },
+    "skills_gated_verify_with_tool_dependency_skills": {
+      "prompt_tokens": 45327171,
+      "completion_tokens": 527293,
+      "total_tokens": 45854464,
+      "cost_usd": 1.865816,
+      "overhead_prompt_tokens": 326966,
+      "overhead_completion_tokens": 6779,
+      "overhead_cost_usd": 0.013756,
+      "overhead_by_tag": {
+        "gate_llm|qwen-2.5-7b": {
+          "prompt_tokens": 95027,
+          "completion_tokens": 2739,
+          "calls": 210
+        },
+        "critic|qwen-2.5-7b": {
+          "prompt_tokens": 231939,
+          "completion_tokens": 4040,
+          "calls": 192
+        }
+      },
+      "total_cost_incl_overhead": 1.879572,
+      "wall_seconds": 3822.0,
+      "n_scored": 210,
+      "note": "tokens/cost are THIS run's new work only; cost_usd actor-only, total_cost_incl_overhead adds gate+critic"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "config": {
+    "experiment": "E12_qwen72b_base_all",
+    "status": "run",
+    "model": "qwen-2.5-72b",
+    "conditions": [
+      "skills_gated_verify_with_tool_dependency_skills"
+    ],
+    "agent_engine": "smolagents",
+    "seed": 42,
+    "checkpoint_every": 25,
+    "stagger_seconds": 8,
+    "gating": {
+      "method": "llm"
+    },
+    "tool_set": "improved",
+    "verify": {
+      "max_iters": 2,
+      "critic_model": "qwen-2.5-72b"
+    },
+    "notes": "E12 Qwen-2.5-72B base vs All on email; all LLM components via OpenRouter (price-sorted).",
+    "condition_queries": {
+      "skills_gated_verify_with_tool_dependency_skills": "/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_model/qwen-2.5-72b/email/results/parallel/shard_01/_q_skills_gated_verify_with_tool_dependency_skills.csv"
+    }
+  },
+  "records": [
+    {
+      "experiment": "E12_qwen72b_base_all",
+      "model": "qwen-2.5-72b",
+      "seed": 42,
+      "condition": "skills_gated_verify_with_tool_dependency_skills",
+      "domain": "email",
+      "split_grain": "domain",
+      "split": "all",
+      "n": 9,
+      "accuracy": 55.6,
+      "side_effect_rate": 22.2,
+      "delta_vs_base": null
+    }
+  ],
+  "usage": {
+    "skills_gated_verify_with_tool_dependency_skills": {
+      "prompt_tokens": 377456,
+      "completion_tokens": 2211,
+      "total_tokens": 379667,
+      "cost_usd": 0.046157,
+      "overhead_prompt_tokens": 8886,
+      "overhead_completion_tokens": 98,
+      "overhead_cost_usd": 0.001105,
+      "overhead_by_tag": {
+        "critic|qwen-2.5-72b": {
+          "prompt_tokens": 5099,
+          "completion_tokens": 8,
+          "calls": 8
+        },
+        "gate_llm|qwen-2.5-72b": {
+          "prompt_tokens": 3787,
+          "completion_tokens": 90,
+          "calls": 9
+        }
+      },
+      "total_cost_incl_overhead": 0.047262,
+      "langchain_cost_usd": 0.0,
+      "wall_seconds": 94.6,
+      "sec_per_query": 10.51,
+      "n_queries": 9,
+      "note": "token/cost/latency cover freshly-run chunks only (resumed chunks not recounted); cost_usd is actor-only, total_cost_incl_overhead adds gate+critic."
+    }
+  }
+}

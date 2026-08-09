@@ -1,0 +1,68 @@
+\documentclass[acmsmall]{acmart}
+
+% Remove ACM-specific boilerplate for submission
+\settopmatter{printacmref=false}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\pagestyle{plain}
+\setcopyright{none}
+
+\usepackage{booktabs}
+\usepackage{pifont}
+
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+
+\begin{document}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\caption{E12 ablation results. Acc. is accuracy; Side eff. is the percentage of incorrect
+responses with harmful actions; cost is USD per scored query. Bold identifies the highest
+accuracy and lowest side-effect rate within a dataset; ties are bolded.}
+\label{tab:e12-all-results}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+& \multicolumn{3}{c}{\textbf{Project management} ($n=80$)}
+& \multicolumn{3}{c}{\textbf{Analytics} ($n=120$)} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Method & Acc. (\%) & Side eff. (\%) & Cost/task (\$) & Acc. (\%) & Side eff. (\%) & Cost/task (\$) \\
+\midrule
+Base & 52.5 & 25.0 & 0.0048 & 34.2 & 55.8 & 0.0088 \\
+Tool-dependency skills & 61.3 & 26.2 & 0.0101 & 38.3 & 52.5 & 0.0090 \\
+Gated skills & \textbf{67.5} & 27.5 & 0.0137 & 41.7 & 47.5 & 0.0089 \\
+Verify & 57.5 & \textbf{12.5} & 0.0112 & 35.0 & 48.3 & 0.0150 \\
+All & 63.7 & 32.5 & 0.0104 & \textbf{45.8} & \textbf{46.7} & 0.0158 \\
+\midrule
+& \multicolumn{3}{c}{\textbf{Calendar} ($n=110$)}
+& \multicolumn{3}{c}{\textbf{CRM} ($n=80$)} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Method & Acc. (\%) & Side eff. (\%) & Cost/task (\$) & Acc. (\%) & Side eff. (\%) & Cost/task (\$) \\
+\midrule
+Base & 84.5 & \textbf{10.9} & 0.0058 & 51.2 & 35.0 & 0.0074 \\
+Tool-dependency skills & \textbf{85.5} & 12.7 & 0.0069 & 52.5 & 35.0 & 0.0087 \\
+Gated skills & 84.5 & 14.5 & 0.0075 & \textbf{61.3} & 35.0 & 0.0098 \\
+Verify & 83.6 & \textbf{10.9} & 0.0088 & 55.0 & \textbf{31.2} & 0.0095 \\
+All & 84.5 & 11.8 & 0.0094 & 58.8 & 37.5 & 0.0121 \\
+\midrule
+& \multicolumn{3}{c}{\textbf{Email} ($n=90$)}
+& \multicolumn{3}{c}{\textbf{Multi-domain} ($n=210$)} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Method & Acc. (\%) & Side eff. (\%) & Cost/task (\$) & Acc. (\%) & Side eff. (\%) & Cost/task (\$) \\
+\midrule
+Base & 65.6 & 27.8 & 0.0073 & 42.4 & 48.1 & 0.0087 \\
+Tool-dependency skills & 65.6 & 30.0 & 0.0090 & 42.4 & 49.5 & 0.0093 \\
+Gated skills & \textbf{84.4} & \textbf{7.8} & 0.0083 & 41.9 & 52.9 & 0.0106 \\
+Verify & 72.2 & 24.4 & 0.0105 & 41.4 & 49.0 & 0.0157 \\
+All & \textbf{84.4} & 8.9 & 0.0095 & \textbf{46.7} & \textbf{44.8} & 0.0183 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ``All'' = skills_gated_verify_with_tool_dependency_skills. Project-management-only
+% exploratory arms (integration test, ungated skills, gated skills + verify, and
+% gated skills + verify + integration test + tool dependency) are omitted because
+% they are not available for the other datasets.
+
+\end{document}

@@ -1,0 +1,32 @@
+{
+  "experiment": "E12_abalation",
+  "status": "run",
+  "model": "gpt-4o-mini-2024-07-18",
+  "conditions": [
+    "base",
+    "with_tool_dependency_skills",
+    "skills_gated",
+    "verify",
+    "skills_gated_verify_with_tool_dependency_skills"
+  ],
+  "agent_engine": "smolagents",
+  "seed": 1,
+  "checkpoint_every": 25,
+  "stagger_seconds": 8,
+  "gating": {
+    "method": "llm"
+  },
+  "tool_set": "improved",
+  "verify": {
+    "max_iters": 2,
+    "critic_model": "gpt-4o-mini-2024-07-18"
+  },
+  "notes": "E12 ablation on customer_relationship_manager (isolated run for per-dataset cost).",
+  "condition_queries": {
+    "base": "/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_domain/customer_relationship_manager/results/parallel/shard_01/_q_base.csv",
+    "with_tool_dependency_skills": "/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_domain/customer_relationship_manager/results/parallel/shard_01/_q_with_tool_dependency_skills.csv",
+    "skills_gated": "/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_domain/customer_relationship_manager/results/parallel/shard_01/_q_skills_gated.csv",
+    "verify": "/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_domain/customer_relationship_manager/results/parallel/shard_01/_q_verify.csv",
+    "skills_gated_verify_with_tool_dependency_skills": "/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_domain/customer_relationship_manager/results/parallel/shard_01/_q_skills_gated_verify_with_tool_dependency_skills.csv"
+  }
+}

@@ -1,0 +1,2508 @@
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:150: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["visits_from_source"] = (data["traffic_source"] == traffic_source).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:150: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["visits_from_source"] = (data["traffic_source"] == traffic_source).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:150: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["visits_from_source"] = (data["traffic_source"] == traffic_source).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:150: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["visits_from_source"] = (data["traffic_source"] == traffic_source).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:150: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["visits_from_source"] = (data["traffic_source"] == traffic_source).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:150: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["visits_from_source"] = (data["traffic_source"] == traffic_source).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:150: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["visits_from_source"] = (data["traffic_source"] == traffic_source).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:150: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["visits_from_source"] = (data["traffic_source"] == traffic_source).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:150: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["visits_from_source"] = (data["traffic_source"] == traffic_source).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:150: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["visits_from_source"] = (data["traffic_source"] == traffic_source).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:150: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["visits_from_source"] = (data["traffic_source"] == traffic_source).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:150: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["visits_from_source"] = (data["traffic_source"] == traffic_source).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:150: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["visits_from_source"] = (data["traffic_source"] == traffic_source).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:150: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["visits_from_source"] = (data["traffic_source"] == traffic_source).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:150: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["visits_from_source"] = (data["traffic_source"] == traffic_source).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:150: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["visits_from_source"] = (data["traffic_source"] == traffic_source).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:150: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["visits_from_source"] = (data["traffic_source"] == traffic_source).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:150: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["visits_from_source"] = (data["traffic_source"] == traffic_source).astype(int)
+
+======================================================================
+[E12 Qwen-7B] project_management
+======================================================================
+[parallel] store: done {'base': 0, 'skills_gated_verify_with_tool_dependency_skills': 0}  |  remaining 160 query-runs across ['base', 'skills_gated_verify_with_tool_dependency_skills']
+[parallel] launching 4 shards (max_workers=4, stagger=8s)
+[parallel] started shard_00 (pid 8446)
+[parallel] started shard_01 (pid 8454)
+[parallel] started shard_02 (pid 8483)
+[parallel] started shard_03 (pid 8485)
+[parallel] finished shard_01  (1/4)  rc=0
+[parallel] finished shard_00  (2/4)  rc=0
+[parallel] finished shard_03  (3/4)  rc=0
+[parallel] finished shard_02  (4/4)  rc=0
+[parallel] shards done in 736s wall
+
+########## E12_qwen7b_base_all — standard results (from store) ##########
+condition     domain                split (grain)            n    acc%   Δbase   side%
+--------------------------------------------------------------------------------------
+base          project_management    all (domain)            80    40.0       -     1.2
+skills_gated_verify_with_tool_dependency_skillsproject_management    all (domain)            80    55.0   +15.0    13.8
+
+########## E12_qwen7b_base_all — cost / tokens (this run) ##########
+  base        6,550,177 tokens  $0.2655  (scored 80)
+  skills_gated_verify_with_tool_dependency_skills  8,687,935 tokens  $0.3517  (scored 80)
+  wall (this run): 736s
+
+Wrote /Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_model/qwen-2.5-7b/project_management/results/metrics.json
+
+======================================================================
+[E12 Qwen-7B] analytics
+======================================================================
+[parallel] store: done {'base': 0, 'skills_gated_verify_with_tool_dependency_skills': 0}  |  remaining 240 query-runs across ['base', 'skills_gated_verify_with_tool_dependency_skills']
+[parallel] launching 4 shards (max_workers=4, stagger=8s)
+[parallel] started shard_00 (pid 8673)
+[parallel] started shard_01 (pid 8675)
+[parallel] started shard_02 (pid 8678)
+[parallel] started shard_03 (pid 8680)
+[parallel] finished shard_01  (1/4)  rc=0
+[parallel] finished shard_02  (2/4)  rc=0
+[parallel] finished shard_00  (3/4)  rc=0
+[parallel] finished shard_03  (4/4)  rc=0
+[parallel] shards done in 2283s wall
+
+########## E12_qwen7b_base_all — standard results (from store) ##########
+condition     domain                split (grain)            n    acc%   Δbase   side%
+--------------------------------------------------------------------------------------
+base          analytics             all (domain)           120    21.7       -    56.7
+skills_gated_verify_with_tool_dependency_skillsanalytics             all (domain)           120    27.5    +5.8    49.2
+
+########## E12_qwen7b_base_all — cost / tokens (this run) ##########
+  base       15,256,358 tokens  $0.6243  (scored 120)
+  skills_gated_verify_with_tool_dependency_skills 25,181,253 tokens  $1.0257  (scored 120)
+  wall (this run): 2283s
+
+Wrote /Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_model/qwen-2.5-7b/analytics/results/metrics.json
+
+======================================================================
+[E12 Qwen-7B] calendar
+======================================================================
+[parallel] store: done {'base': 0, 'skills_gated_verify_with_tool_dependency_skills': 0}  |  remaining 220 query-runs across ['base', 'skills_gated_verify_with_tool_dependency_skills']
+[parallel] launching 4 shards (max_workers=4, stagger=8s)
+[parallel] started shard_00 (pid 9325)
+[parallel] started shard_01 (pid 9341)
+[parallel] started shard_02 (pid 9349)
+[parallel] started shard_03 (pid 9364)
+[parallel] finished shard_02  (1/4)  rc=0
+[parallel] finished shard_03  (2/4)  rc=0
+[parallel] finished shard_00  (3/4)  rc=0
+[parallel] finished shard_01  (4/4)  rc=0
+[parallel] shards done in 1016s wall
+
+########## E12_qwen7b_base_all — standard results (from store) ##########
+condition     domain                split (grain)            n    acc%   Δbase   side%
+--------------------------------------------------------------------------------------
+base          calendar              all (domain)           110    38.2       -    21.8
+skills_gated_verify_with_tool_dependency_skillscalendar              all (domain)           110    46.4    +8.2    27.3
+
+########## E12_qwen7b_base_all — cost / tokens (this run) ##########
+  base        9,303,284 tokens  $0.3786  (scored 110)
+  skills_gated_verify_with_tool_dependency_skills 10,865,899 tokens  $0.4405  (scored 110)
+  wall (this run): 1016s
+
+Wrote /Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_model/qwen-2.5-7b/calendar/results/metrics.json
+
+======================================================================
+[E12 Qwen-7B] customer_relationship_manager
+======================================================================
+[parallel] store: done {'base': 0, 'skills_gated_verify_with_tool_dependency_skills': 0}  |  remaining 160 query-runs across ['base', 'skills_gated_verify_with_tool_dependency_skills']
+[parallel] launching 4 shards (max_workers=4, stagger=8s)
+[parallel] started shard_00 (pid 9639)
+[parallel] started shard_01 (pid 9641)
+[parallel] started shard_02 (pid 9643)
+[parallel] started shard_03 (pid 9645)
+[parallel] finished shard_03  (1/4)  rc=0
+[parallel] finished shard_02  (2/4)  rc=0
+[parallel] finished shard_00  (3/4)  rc=0
+[parallel] finished shard_01  (4/4)  rc=0
+[parallel] shards done in 678s wall
+
+########## E12_qwen7b_base_all — standard results (from store) ##########
+condition     domain                split (grain)            n    acc%   Δbase   side%
+--------------------------------------------------------------------------------------
+base          customer_relationship_managerall (domain)            80    40.0       -    22.5
+skills_gated_verify_with_tool_dependency_skillscustomer_relationship_managerall (domain)            80    41.2    +1.2    23.8
+
+########## E12_qwen7b_base_all — cost / tokens (this run) ##########
+  base        4,605,322 tokens  $0.1865  (scored 80)
+  skills_gated_verify_with_tool_dependency_skills  6,833,480 tokens  $0.2763  (scored 80)
+  wall (this run): 678s
+
+Wrote /Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_model/qwen-2.5-7b/customer_relationship_manager/results/metrics.json
+
+======================================================================
+[E12 Qwen-7B] email
+======================================================================
+[parallel] store: done {'base': 0, 'skills_gated_verify_with_tool_dependency_skills': 0}  |  remaining 180 query-runs across ['base', 'skills_gated_verify_with_tool_dependency_skills']
+[parallel] launching 4 shards (max_workers=4, stagger=8s)
+[parallel] started shard_00 (pid 9913)
+[parallel] started shard_01 (pid 9916)
+[parallel] started shard_02 (pid 9918)
+[parallel] started shard_03 (pid 9920)
+[parallel] finished shard_00  (1/4)  rc=0
+[parallel] finished shard_01  (2/4)  rc=0
+[parallel] finished shard_03  (3/4)  rc=0
+[parallel] finished shard_02  (4/4)  rc=0
+[parallel] shards done in 830s wall
+
+########## E12_qwen7b_base_all — standard results (from store) ##########
+condition     domain                split (grain)            n    acc%   Δbase   side%
+--------------------------------------------------------------------------------------
+base          email                 all (domain)            90    12.2       -    31.1
+skills_gated_verify_with_tool_dependency_skillsemail                 all (domain)            90    27.8   +15.6    32.2
+
+########## E12_qwen7b_base_all — cost / tokens (this run) ##########
+  base        6,233,926 tokens  $0.2528  (scored 90)
+  skills_gated_verify_with_tool_dependency_skills  9,710,203 tokens  $0.3921  (scored 90)
+  wall (this run): 830s
+
+Wrote /Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_model/qwen-2.5-7b/email/results/metrics.json
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:123: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["user_engaged"] = data["user_engaged"].astype(bool).astype(int)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+/Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/src/tools/analytics.py:176: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data["session_duration_seconds"] = data["session_duration_seconds"].astype(float)
+
+======================================================================
+[E12 Qwen-7B] multi_domain
+======================================================================
+[parallel] store: done {'base': 0, 'skills_gated_verify_with_tool_dependency_skills': 0}  |  remaining 420 query-runs across ['base', 'skills_gated_verify_with_tool_dependency_skills']
+[parallel] launching 4 shards (max_workers=4, stagger=8s)
+[parallel] started shard_00 (pid 10027)
+[parallel] started shard_01 (pid 10029)
+[parallel] started shard_02 (pid 10031)
+[parallel] started shard_03 (pid 10034)
+[parallel] finished shard_02  (1/4)  rc=0
+[parallel] finished shard_03  (2/4)  rc=0
+[parallel] finished shard_00  (3/4)  rc=0
+[parallel] finished shard_01  (4/4)  rc=0
+[parallel] shards done in 3822s wall
+
+########## E12_qwen7b_base_all — standard results (from store) ##########
+condition     domain                split (grain)            n    acc%   Δbase   side%
+--------------------------------------------------------------------------------------
+base          multi_domain          all (domain)           210    19.5       -    51.4
+skills_gated_verify_with_tool_dependency_skillsmulti_domain          all (domain)           210    21.4    +1.9    47.1
+
+########## E12_qwen7b_base_all — cost / tokens (this run) ##########
+  base       26,624,442 tokens  $1.0885  (scored 210)
+  skills_gated_verify_with_tool_dependency_skills 45,854,464 tokens  $1.8658  (scored 210)
+  wall (this run): 3822s
+
+Wrote /Users/harshadakumbhare/Documents/GitHub/research_project/MAESTRO_v2/experiments/E12_abalation/by_model/qwen-2.5-7b/multi_domain/results/metrics.json
